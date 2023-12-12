@@ -9,11 +9,11 @@ function ThemeSwitch() {
   return (
     <div
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="flex items-center border-secondary border-[0.25rem] bg-secondary rounded-full h-[3vh] w-[3vw] transition-all	transition ease-in-out max-sm:h-[50px] max-sm:w-[50px] max-sm:border-[2px]"
+      className="flex items-center border-secondary border-[0.25rem] bg-secondary rounded-full h-[3vh] w-[3vw] xl:h-[3vh] xl:w-[4vw] 2xl:w-[4vw] transition-all	transition ease-in-out xl:h-[3vh] xl:w-[3vw] max-lg:h-[40px] max-lg:w-[50px] max-xl:border-[2px]"
     >
       <Button
         classes={{
-          container: theme === "light" ? "sm:flex" : "max-sm:hidden",
+          container: theme === "light" ? "sm:flex" : "max-xl:hidden",
         }}
         Icon={Sun}
         isRight
@@ -21,7 +21,7 @@ function ThemeSwitch() {
       />
       <Button
         classes={{
-          container: theme !== "light" ? "sm:flex" : "max-sm:hidden",
+          container: theme !== "light" ? "sm:flex" : "max-xl:hidden",
         }}
         Icon={Moon}
         disable={theme !== "light"}

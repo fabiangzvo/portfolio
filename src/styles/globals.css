@@ -5,11 +5,11 @@
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: blue;
-  --background: #E0F4FF;
+  --background-end-rgb: 224,244,255,.9;
+  --background: white;
   --primary:#0C356A;
   --secondary:#5584AC;
-  --tertiary:#D5FFD0;
+  --tertiary:#F0FFFB;
   --text:#0F0F0F;
 }
 
@@ -19,8 +19,8 @@ html.dark {
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: red;
     --background: #0F0F0F;
-    --primary:#008170;
-    --secondary:#008170;
+    --primary:#01557c;
+    --secondary:#00d4ff;
     --tertiary:#232D3F;
     --text:#ffff;
   }
@@ -31,7 +31,9 @@ body {
 }
 
 #__next{
-  width: 90vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .underlined {
@@ -61,7 +63,7 @@ body {
 .underlined:hover:after,
 .underlined:focus:after,
 .active.underlined:after {
-  background-color: currentColor;
+  background-color: var(--text);
   transform: scaleX(1);
 }
 
@@ -76,4 +78,21 @@ body {
   .active.underlined:after {
     opacity: 1;
   }
+}
+
+.fill-text-transparent{
+  -webkit-text-fill-color:transparent;
+}
+
+:not(html,body)::-webkit-scrollbar {
+  width: .2em;
+}
+
+:not(html,body)::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px var(--secondary);
+}
+
+:not(html,body)::-webkit-scrollbar-thumb {
+background-color: var(--primary);
+outline: 1px solid slategrey;
 }

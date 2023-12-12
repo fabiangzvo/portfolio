@@ -1,8 +1,77 @@
 {
-    "main":{
-        "title":"hello bitch",
-        "spanish":"Spanish",
-        "english":"English",
-        "portuguese":"Portuguese"
-    }
+  "main": {
+    "greeting": "Hi! my name is",
+    "description": "and i love create web apps.",
+    "spanish": "Spanish",
+    "english": "English",
+    "portuguese": "Portuguese",
+    "viewLess": "View less",
+    "viewMore": "View More"
+  },
+  "navbar": {
+    "about": "About",
+    "education": "Education",
+    "experience": "Experience",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "about": {
+    "description": "I am a full stack developer with 3 years of experience developing web applications, using Javascript, Nodejs, Golang and Reactjs. I get involved in teamwork, developing new features from scratch, and always willing to give the best of myself. Interested in quality code, scalability, best practices, and performance.",
+    "label": "The best things are written in the web."
+  },
+  "education": {
+    "description": "Discover how my education and successes have been instrumental in driving my passion for creating comprehensive, cutting-edge technology solutions.",
+    "label": "Awards & education",
+    "hackathonDate": "March 2020",
+    "hackathonTitle": "Hackathon winner",
+    "hackathonDescription": "The hackathon was created by the Autonomous University of Manizales - CO, in collaboration with IAS software.",
+    "technicianDate": "August 2019",
+    "technicianTitle": "Professional technician in software development.",
+    "technicianDescription": "2 years, University institution EAM.",
+    "technologistDate": "June 2022",
+    "technologistTitle": "Software design technologist.",
+    "technologistDescription": "2 years, University institution EAM.",
+    "professionalDate": "Currently",
+    "professionalTitle": "I'm waiting for software engineering graduation.",
+    "professionalDescription": "6 years, University institution EAM."
+  },
+  "experience": {
+    "label": "Experience",
+    "description": "Immerse yourself in my career as a web developer. My background includes the creation of comprehensive and efficient solutions that fuse the creativity of design with the robustness of programming. Discover how each project is a testament to my commitment to software quality and innovation",
+    "currently": "Currently",
+    "zenviaDate": "2 years and 3 months. 2021 - 2023",
+    "zenviaPosition": "Zenvia Conversion - Full stack developer",
+    "zenviaDescription": "Web development using React, Nodejs, Javascript and Typescript.",
+    "andikemDate": "6 moths, 2022 - 2023",
+    "andikemPosition": "Andikem - Frontend developer.",
+    "andikemDescription": "Freelance creating a platform to admin all containers around the world. Developed with Html, css, React.",
+    "licimaticDate": "1 year and 3 moths, 2020 - 2021",
+    "licimaticPosition": "LiciMátic - Full stack developer.",
+    "licimaticDescription": "Web development using Go, Nodejs, React. LiciMátic is the most advanced platform for public tenders in Colombia.",
+    "swatitDate": "10 months, 2019 - 2020",
+    "swatitPosition": "Swat-it - junior web developer.",
+    "swatitDescription": "Web development using Php, Wordpress, Javascript."
+  },
+  "portfolio": {
+    "label": "portfolio",
+    "description": "Step into my digital world where versatility meets innovation. Each project in my portfolio is the result of merging frontend and backend, from captivating interfaces to robust systems. Discover how I transform ideas into complete solutions with an inspiring and functional touch.",
+    "work": "Work",
+    "visit": "Visit",
+    "conversionDescription": "It is a conversational platform that allows communication between customers and companies and enables integration with various tools.",
+    "conversionTitle": "Zenvia Conversion",
+    "licimaticDescription": "It is a software that simplifies the entire contracting process for companies, generating easy and economical contracting processes for any company, in addition to providing the tools so that they can have a clean and transparent battle, applying to any call and public bidding.",
+    "licimaticTitle": "Licimatic",
+    "spotyTitle": "SpotyClient",
+    "spotyDescription": "Explore the evolution of music with our redesigned app, taking the Spotify experience to new levels. Discover an inspiring UI."
+  },
+  "contact": {
+    "email": "Email",
+    "name": "Name",
+    "message": "Message",
+    "messagePlaceholder": "Write your ideas here...",
+    "send": "Send",
+    "label": "Let's work together!",
+    "contact": "Let's talk",
+    "description": "As a web developer, I offer strong technical skills and a creative approach to drive innovation.I am excited to collaborate on challenging projects.<br /><br />Together we can build impactful solutions that transcend expectations!"
+  }
 }

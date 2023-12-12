@@ -1,8 +1,77 @@
 {
-    "main":{
-        "title":"Melinho caramelinho",
-        "spanish":"Espanhol",
-        "english":"Inglés",
-        "portuguese":"Portuguese"
-    }
+  "main": {
+    "greeting": "Oí! meu nome é",
+    "description": "y adoro criar aplicativos da web.",
+    "spanish": "Espanhol",
+    "english": "Inglés",
+    "portuguese": "Portuguese",
+    "viewLess": "Ver menos",
+    "viewMore": "Ver más"
+  },
+  "navbar": {
+    "about": "Sobre mim",
+    "education": "educação",
+    "experience": "experiência",
+    "portfolio": "portfólio",
+    "contact": "contato"
+  },
+  "about": {
+    "description": "Eu sou um desenvolvedor full stack com 3 anos de experiência no desenvolvimento de aplicações web, utilizando Javascript, Nodejs, Golang e Reactjs. Eu me envolvo em trabalho em equipe, desenvolvendo novas funcionalidades do zero, e sempre disposto a dar o melhor de mim. Interessado em código de qualidade, escalabilidade, melhores práticas e desempenho.",
+    "label": "As melhores coisas estão escritas na web."
+  },
+  "education": {
+    "description": "Descubra como minha formação e meus sucessos foram fundamentais para impulsionar minha paixão por criar soluções tecnológicas abrangentes e de ponta.",
+    "label": "Prêmios e Educação",
+    "hackathonDate": "Março 2020",
+    "hackathonTitle": "Vencedor do hackathon",
+    "hackathonDescription": "O hackathon foi criado pela Universidade Autônoma de Manizales - CO, em colaboração com o software IAS.",
+    "technicianDate": "Agosto 2019",
+    "technicianTitle": "Técnico profissional em desenvolvimento de software.",
+    "technicianDescription": "2 anos, Instituição Universidade EAM.",
+    "technologistDate": "Junho 2022",
+    "technologistTitle": "Tecnologia de design de software.",
+    "technologistDescription": "2 anos, Instituição Universidade EAM.",
+    "professionalDate": "Atualmente",
+    "professionalTitle": "Estou aguardando a graduação em engenharia de software.",
+    "professionalDescription": "6 anos, Instituição Universidade EAM."
+  },
+  "experience": {
+    "label": "Experiência",
+    "description": "Mergulhe em minha jornada profissional como desenvolvedor da Web. Minha experiência inclui a criação de soluções abrangentes e eficientes que combinam a criatividade do design com a robustez da programação. Descubra como cada projeto é uma prova do meu compromisso com a qualidade e a inovação do software.",
+    "currently": "Atualmente",
+    "zenviaDate": "2 anos e 3 meses. 2021 - 2023",
+    "zenviaPosition": "Zenvia Conversion - Desenvolvedor full stack",
+    "zenviaDescription": "Desenvolvimento web usando React, Nodejs, Javascript y Typescript.",
+    "andikemDate": "6 meses, 2022 - 2023",
+    "andikemPosition": "Andikem - Desenvolvedor frontend.",
+    "andikemDescription": "Freelancer criando uma plataforma para administrar todos os contêineres do mundo. Desenvolvido com Html, css, React.",
+    "licimaticDate": "1 ano e 3 meses, 2020 - 2021",
+    "licimaticPosition": "LiciMátic - Desenvolvedor full stack.",
+    "licimaticDescription": "Desenvolvimento web usando Go, Nodejs, React. A LiciMátic é a plataforma mais avançada para licitações públicas na Colombia.",
+    "swatitDate": "10 meses, 2019 - 2020",
+    "swatitPosition": "Swat-it - Desenvolvedor web junior.",
+    "swatitDescription": "Desenvolvimento web usando Php, Wordpress, Javascript."
+  },
+  "portfolio": {
+    "label": "Portafolio",
+    "description": "Adentre-se no meu mundo digital, onde a versatilidade encontra a inovação. Cada projeto em meu portfólio é o resultado da fusão entre o frontend e o backend, desde interfaces cativantes até sistemas robustos. Descubra como transformo ideias em soluções completas com um toque inspirador e funcional.",
+    "work": "Trabalho",
+    "visit": "Visitar",
+    "conversionDescription": "É uma plataforma de conversação que permite a comunicação entre clientes e empresas e possibilita a integração com várias ferramentas.",
+    "conversionTitle": "Zenvia Conversion",
+    "licimaticDescription": "É um software que simplifica todo o processo de contratação das empresas, gerando processos de contratação fáceis e econômicos para qualquer empresa, além de fornecer as ferramentas para que elas possam ter uma batalha limpa e transparente, candidatando-se a qualquer chamada e licitação pública.",
+    "licimaticTitle": "Licimatic",
+    "spotyTitle": "SpotyClient",
+    "spotyDescription": "Explore a evolução da música com nosso aplicativo reformulado, levando a experiência do Spotify a novos níveis. Descubra uma interface inspiradora."
+  },
+  "contact": {
+    "email": "Email",
+    "name": "Nome",
+    "message": "Mensagem",
+    "messagePlaceholder": "Escreva suas ideias aqui...",
+    "send": "Enviar",
+    "label": "Vamos trabalhar juntos!",
+    "contact": "Vamos conversar",
+    "description": "Como desenvolvedor Web, ofereço habilidades técnicas sólidas e uma abordagem criativa para impulsionar a inovação e estou animado para colaborar em projetos desafiadores.<br /><br />Juntos, podemos criar soluções impactantes que transcendem as expectativas!"
+  }
 }

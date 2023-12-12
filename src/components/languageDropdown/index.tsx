@@ -35,7 +35,7 @@ function LanguageDropdown(props: DropdownProps) {
 
     const label = (
       <>
-        <Translate /> &emsp;{" "}
+        <Translate /> &emsp;
         {options.find((language) => language.value === router.locale)?.label}
       </>
     );

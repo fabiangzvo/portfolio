@@ -1,7 +1,7 @@
 function Translate(props: any) {
   return (
     <svg
-      className="fill-primary"
+      className="fill-secondary"
       height={24}
       width={24}
       viewBox="0 0 48 48"
