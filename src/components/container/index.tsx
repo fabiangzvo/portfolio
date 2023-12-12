@@ -6,7 +6,7 @@ type ContainerProps = {
   id: string;
   label: string;
   rightTitle?: boolean;
-  description?: string | React.ReactNode;
+  description?: any;
   classes?: { container?: string; title?: string; containerTitle?: string };
 };
 
