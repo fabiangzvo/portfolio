@@ -1,16 +1,13 @@
 import React, { useRef, useCallback, useState } from "react";
 import { useTranslations } from "next-intl";
 import { GetStaticPropsContext } from "next";
+import cs from "classnames";
 
-type MilestoneItemProps = {
-  icon: React.ReactNode;
-  description: string;
-  primaryText: string | React.ReactNode;
-  secondaryText: string;
-};
+import { MilestoneItemProps } from "../types";
 
 function MilestoneItem(props: MilestoneItemProps) {
-  const { primaryText, secondaryText, description, icon } = props;
+  const { primaryText, secondaryText, description, icon, disableViewMore } =
+    props;
   const [isHide, setIsHide] = useState(true);
 
   const ref = useRef<HTMLParagraphElement | null>(null);
@@ -49,7 +46,12 @@ function MilestoneItem(props: MilestoneItemProps) {
         >
           {description}
         </p>
-        <button onClick={handleClick}>
+        <button
+          className={cs({
+            invisible: disableViewMore,
+          })}
+          onClick={handleClick}
+        >
           {translations(isHide ? "viewMore" : "viewLess")}
         </button>
       </div>

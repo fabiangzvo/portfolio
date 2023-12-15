@@ -5,8 +5,8 @@ type ContainerProps = {
   children: React.ReactNode;
   id: string;
   label: string;
+  description?: undefined | TrustedHTML;
   rightTitle?: boolean;
-  description?: any;
   classes?: { container?: string; title?: string; containerTitle?: string };
 };
 
@@ -33,7 +33,7 @@ function Container(props: ContainerProps) {
         </h1>
         <span
           className="w-full text-2xl"
-          dangerouslySetInnerHTML={{ __html: description }}
+          dangerouslySetInnerHTML={{ __html: description || "" }}
         />
       </div>
     );

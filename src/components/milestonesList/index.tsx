@@ -4,7 +4,7 @@ import { MilestoneProps } from "./types";
 import MilestoneItem from "./components/milestoneItem";
 
 function MilestonesList(props: MilestoneProps) {
-  const { list = [] } = props;
+  const { list = [], disableViewMore } = props;
 
   const items = useMemo(
     () =>
@@ -15,9 +15,10 @@ function MilestonesList(props: MilestoneProps) {
           description={description}
           primaryText={primaryText}
           secondaryText={secondaryText}
+          disableViewMore={disableViewMore}
         />
       )),
-    [list]
+    [list, disableViewMore]
   );
 
   return <ol className="relative ml-10">{items}</ol>;

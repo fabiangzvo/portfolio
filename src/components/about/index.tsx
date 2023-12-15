@@ -18,7 +18,10 @@ function About() {
           "max-2xl:w-full max-xl:flex-column max-xl:items-center max-xl:justify-center xl:mr-10 mb-10",
       }}
     >
-      <span className="w-full text-2xl">{translations("description")}</span>
+      <span
+        className="w-full text-2xl"
+        dangerouslySetInnerHTML={{ __html: translations("description") }}
+      />
     </Container>
   );
 }

@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   i18n: {
     locales: ["en", "es", "pt"],
-    defaultLocale: "en",
+    defaultLocale: "es",
   },
   images: {
     domains: ["comunidad.socialab.com"],
