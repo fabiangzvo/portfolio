@@ -1,7 +1,8 @@
-import { useReducer, FunctionComponent, useMemo, ReactNode, FC } from "react";
+import { useReducer, FunctionComponent, useMemo, ReactNode } from "react";
 
 type ProviderType = {
   Component: FunctionComponent<any>;
+  name: string;
   config?: Record<string, any>;
 };
 
@@ -20,7 +21,23 @@ function reducer(
 
   switch (action) {
     case "add":
-      return [...state, provider];
+      const alreadyExistProvider = state.some(
+        (currentProvider) => currentProvider.name === provider.name
+      );
+
+      return alreadyExistProvider ? state : [...state, provider];
+    case "modify":
+      const NewState = state.map((currentProvider) => {
+        if (currentProvider.name !== provider.name) return currentProvider;
+
+        return {
+          config: { ...currentProvider.config, ...provider?.config },
+          Component: provider?.Component || currentProvider?.Component,
+          name: provider.name,
+        };
+      });
+
+      return NewState;
     default:
       return state;
   }

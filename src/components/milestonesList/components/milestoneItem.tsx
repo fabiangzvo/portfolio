@@ -18,11 +18,11 @@ function MilestoneItem(props: MilestoneItemProps) {
   >(() => {
     if (ref?.current) {
       const target = ref?.current;
-      const isHideStatus = target.classList.contains("line-clamp-1");
+      const isHideStatus = target.classList.contains("line-clamp-2");
 
       isHideStatus
-        ? target.classList.remove("line-clamp-1")
-        : target.classList.add("line-clamp-1");
+        ? target.classList.remove("line-clamp-2")
+        : target.classList.add("line-clamp-2");
 
       setIsHide(!isHideStatus);
     }
@@ -42,7 +42,7 @@ function MilestoneItem(props: MilestoneItemProps) {
         </h3>
         <p
           ref={ref}
-          className="text-xl font-normal text-gray-500 dark:text-gray-400 line-clamp-1"
+          className="text-xl font-normal text-gray-500 dark:text-gray-400 line-clamp-2"
         >
           {description}
         </p>

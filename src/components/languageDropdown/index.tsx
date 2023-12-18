@@ -20,7 +20,7 @@ function LanguageDropdown(props: DropdownProps) {
       const target = event.target as HTMLElement;
 
       router.push(router.asPath, router.asPath, {
-        locale: target.getAttribute("data-value") || "en",
+        locale: target.getAttribute("data-value") || "es",
       });
     },
     [router]

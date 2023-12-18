@@ -41,16 +41,16 @@
     "currently": "Atualmente",
     "zenviaDate": "2 anos e 3 meses. 2021 - 2023",
     "zenviaPosition": "Zenvia Conversion - Desenvolvedor full stack",
-    "zenviaDescription": "Desenvolvimento web usando React, Nodejs, Javascript y Typescript.",
+    "zenviaDescription": "Desenvolvimento web Full Stack usando tecnologias como React, Node.js, JavaScript e TypeScript. Concentrei-me em o processamento quase em tempo real, webhooks, rebranding e integrações com aplicativos externos. Além disso, atualmente sou responsável por detectar e corrigir bugs, bem como criar novas funcionalidades do zero.",
     "andikemDate": "6 meses, 2022 - 2023",
     "andikemPosition": "Andikem - Desenvolvedor frontend.",
-    "andikemDescription": "Freelancer criando uma plataforma para administrar todos os contêineres do mundo. Desenvolvido com Html, css, React.",
+    "andikemDescription": "Liderei o desenvolvimento de front-end de uma plataforma para gerenciar contêineres globalmente. Usei ReactJs, Bootstrap e Google Maps para criar uma interface moderna e funcional. Inicialmente, concentrei-me em redesenhar o aplicativo, estabelecendo uma estrutura modular e convenções de desenvolvimento. Em seguida, criei cada parte do aplicativo, implementando suas respectivas funcionalidades.",
     "licimaticDate": "1 ano e 3 meses, 2020 - 2021",
     "licimaticPosition": "LiciMátic - Desenvolvedor full stack.",
-    "licimaticDescription": "Desenvolvimento web usando Go, Nodejs, React. A LiciMátic é a plataforma mais avançada para licitações públicas na Colombia.",
+    "licimaticDescription": "Desenvolvimento web Full Stack usando tecnologias como React, Pub/Sub, Node.js, JavaScript e Golang. Concentrei-me na refatoração do código espaguete de vários aplicativos e na criação de novas funcionalidades de back-end/front-end, como criação de endpoints, trabalhos Cron e scraping com estratégias quase em tempo real e construção de UI. Finalmente, concentrei-me no redesenho completo da UI do aplicativo.",
     "swatitDate": "10 meses, 2019 - 2020",
     "swatitPosition": "Swat-it - Desenvolvedor web junior.",
-    "swatitDescription": "Desenvolvimento web usando Php, Wordpress, Javascript."
+    "swatitDescription": "Desenvolvimento web usando tecnologias como PHP, Angular, Wordpress, Jquery, TypeRocket. Concentrei-me na criação de novas funcionalidades, como criação e correções de UI, criação de endpoints e recuperação de projetos quase perdidos."
   },
   "portfolio": {
     "label": "Portafolio",

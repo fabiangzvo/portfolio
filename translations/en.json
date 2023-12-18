@@ -41,16 +41,16 @@
     "currently": "Currently",
     "zenviaDate": "2 years and 3 months. 2021 - 2023",
     "zenviaPosition": "Zenvia Conversion - Full stack developer",
-    "zenviaDescription": "Web development using React, Nodejs, Javascript and Typescript.",
+    "zenviaDescription": "Full Stack web development using technologies such as React, Node.js, JavaScript and TypeScript. I focused on the near real-time processing, webhooks, rebranding and integrations with external apps. In addition, I am currently responsible for detecting and fixing bugs, as well as creating new features from scratch.",
     "andikemDate": "6 moths, 2022 - 2023",
     "andikemPosition": "Andikem - Frontend developer.",
-    "andikemDescription": "Freelance creating a platform to admin all containers around the world. Developed with Html, css, React.",
+    "andikemDescription": "I led the frontend development of a platform to manage containers globally. I used ReactJs, Bootstrap and Google Maps to create a modern and functional interface. Initially, I focused on redesigning the application, establishing a modular structure and development conventions. Then, I built each part of the application, implementing its respective functionalities. My work resulted in an efficient and easy to use platform.",
     "licimaticDate": "1 year and 3 moths, 2020 - 2021",
     "licimaticPosition": "LiciMátic - Full stack developer.",
-    "licimaticDescription": "Web development using Go, Nodejs, React. LiciMátic is the most advanced platform for public tenders in Colombia.",
+    "licimaticDescription": "Full Stack web development using technologies such as React, Pub/Sub, Node.js, JavaScript and Golang. I focused on refactoring the spaghetti code of several apps and creating new backend/frontend functionalities such as endpoint creation, Cron jobs and scrapping with near real time strategies and UI building. Finally I was focused on the complete UI redesign of the app.",
     "swatitDate": "10 months, 2019 - 2020",
     "swatitPosition": "Swat-it - junior web developer.",
-    "swatitDescription": "Web development using Php, Wordpress, Javascript."
+    "swatitDescription": "Web development using technologies such as PHP, Angular, Wordpress, Jquery, TypeRocket. I focused on creating new functionalities such as UI creation and corrections, endpoint creation and recovery of almost lost projects."
   },
   "portfolio": {
     "label": "portfolio",

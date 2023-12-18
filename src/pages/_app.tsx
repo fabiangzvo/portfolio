@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const { Providers, setProviders } = useProviders([
     {
+      name: "translate",
       Component: NextIntlClientProvider,
       config: {
         locale: router.locale,
@@ -27,11 +28,23 @@ export default function App({ Component, pageProps }: AppProps) {
     setProviders({
       action: "add",
       provider: {
+        name: "theme",
         Component: ThemeProvider,
         config: { attribute: "class", defaultTheme: "light" },
       },
     });
   }, [setProviders]);
+
+  useEffect(() => {
+    setProviders &&
+      setProviders({
+        action: "modify",
+        provider: {
+          name: "translate",
+          config: { locale: router.locale, messages: pageProps.messages },
+        },
+      });
+  }, [router.locale, setProviders, pageProps.messages]);
 
   return (
     <Providers>
