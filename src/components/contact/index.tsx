@@ -19,10 +19,10 @@ function Contact() {
       }}
     >
       <form
-        className="flex flex-col w-full bg-background border border-secondary rounded-xl px-[6em] py-[6em] shadow-lg shadow-primary"
+        className="flex flex-col w-full bg-background border border-stroke rounded-xl px-[6em] py-[6em] shadow-lg shadow-stroke"
         action="submit"
       >
-        <h1 className="pointer-events-none text-text w-full text-center text-3xl font-extrabold w-full text-white font-extrabold mb-10">
+        <h1 className="pointer-events-none text-paragraph w-full text-center text-3xl font-extrabold w-full font-extrabold mb-10">
           {translations("contact")}
         </h1>
         <div className="mb-10">
@@ -32,7 +32,7 @@ function Contact() {
           <input
             type="text"
             id="name"
-            className="bg-tertiary border-primary text-lg rounded-lg block w-full p-2.5"
+            className="bg-stroke text-lg rounded-lg block w-full p-2.5"
             placeholder="Fabián Guzmán O."
             required
           />
@@ -44,7 +44,7 @@ function Contact() {
           <input
             type="email"
             id="email"
-            className="bg-tertiary border-primary text-lg rounded-lg block w-full p-2.5"
+            className="bg-stroke text-lg rounded-lg block w-full p-2.5"
             placeholder="example@example.com"
             required
           />
@@ -55,12 +55,12 @@ function Contact() {
           </label>
           <textarea
             id="message"
-            className="bg-tertiary border-primary text-lg rounded-lg block w-full p-2.5"
+            className="bg-stroke text-lg rounded-lg block w-full p-2.5"
             placeholder={translations("messagePlaceholder")}
           ></textarea>
         </div>
         <button className="relative w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-xl font-medium text-text rounded-lg group bg-gradient-to-br from-secondary to-primary group-hover:from-primary group-hover:to-secondary focus:ring-4 focus:outline-none focus:ring-primary">
-          <span className="relative text-text w-full px-5 py-2.5 transition-all ease-in duration-75 bg-background rounded-md group-hover:bg-transparent">
+          <span className="relative text-text w-full px-5 py-2.5 transition-all ease-in duration-75 bg-background rounded-md group-hover:bg-transparent group-hover:text-buttonText">
             {translations("send")}
           </span>
         </button>

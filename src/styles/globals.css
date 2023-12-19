@@ -3,30 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --background: white;
-  --primary: #0c356a;
-  --secondary: #5584ac;
-  --tertiary: #f0fffb;
-  --text: #0f0f0f;
+  --background: #fffffe;
+  --stroke: #e5e5e5;
+  --paragraph: #2d334a;
+  --buttonText: #fffffe;
+  --primary: #c92929;
+  --secondary: #ffdc74;
+  --tertiary: #fca311;
+  --highlight: #c92929;
+  --desktop: gray;
+  --text: black;
 }
 
 html.dark {
   --background: #0f0e17;
-  --headline: #fffffe;
+  --stroke: black;
   --paragraph: #a7a9be;
   --buttonText: #fffffe;
-  --button: #ff8906;
-
-  --stroke: black;
-  --main: #fffffe;
-  --highlight: #ff8906;
+  --primary: #ffba08;
   --secondary: #f25f4c;
   --tertiary: #e53170;
-
-  --primary: #01557c;
-  --secondary: #00d4ff;
-  --tertiary: #232d3f;
-  --text: #ffff;
+  --highlight: #ff8906;
+  --desktop: #8d99ae;
+  --text: white;
 }
 
 body {
@@ -67,7 +66,7 @@ body {
 .underlined:hover:after,
 .underlined:focus:after,
 .active.underlined:after {
-  background-color: var(--text);
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
   transform: scaleX(1);
 }
 

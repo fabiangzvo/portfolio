@@ -51,7 +51,7 @@ function Navbar() {
           href="/"
           className="block transition text-text whitespace-nowrap font-medium focus:outline-none max-lg:flex max-lg:justify-center max-lg:w-full"
         >
-          <h1 className="max-lg:flex max-xl:justify-start max-lg:w-full underlined cursor-pointer">
+          <h1 className="max-lg:flex max-xl:justify-start max-lg:w-full underlined cursor-pointer bg-clip-text fill-text-transparent bg-gradient-to-r to-tertiary from-primary">
             Fabián Guzmán Otavo
           </h1>
         </Link>
@@ -65,7 +65,7 @@ function Navbar() {
       <ListOfLinks hide={!showMenu && isSm} items={menu} />
       <div
         className={cs({
-          "flex w-[15vw] lg:w-[20vw] justify-between flex max-lg:w-full max-lg:order-1 order-none	max-lg:order-5":
+          "flex w-[13vw] lg:w-[15vw] justify-between flex max-lg:w-full max-lg:order-1 order-none	max-lg:order-5":
             true,
           hidden: !showMenu && isSm,
         })}

@@ -9,7 +9,7 @@ function ThemeSwitch() {
   return (
     <div
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="flex items-center border-secondary border-[0.25rem] bg-secondary rounded-full h-[3vh] w-[3vw] xl:h-[3vh] xl:w-[4vw] 2xl:w-[4vw] transition-all	transition ease-in-out xl:h-[3vh] xl:w-[3vw] max-lg:h-[40px] max-lg:w-[50px] max-xl:border-[2px]"
+      className="flex items-center border-primary border-[0.25rem] bg-primary rounded-full h-[3vh] w-[3vw] xl:h-[3vh] xl:w-[4vw] 2xl:w-[4vw] transition-all	transition ease-in-out xl:h-[3vh] xl:w-[3vw] max-lg:h-[40px] max-lg:w-[50px] max-xl:border-[2px]"
     >
       <Button
         classes={{

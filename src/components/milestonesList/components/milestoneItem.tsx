@@ -29,20 +29,20 @@ function MilestoneItem(props: MilestoneItemProps) {
   }, [ref]);
 
   return (
-    <li className="mb-6 ms-4 h-full">
+    <li className="ms-4 h-full">
       <div className="flex items-end">
         <div className="absolute -start-6 flex justify-center">{icon}</div>
-        <time className="text-lg font-normal leading-none text-gray-400 dark:text-gray-500 pl-2">
+        <time className="pointer-events-none text-lg font-normal leading-none text-gray-400 dark:text-gray-500 pl-2">
           {primaryText}
         </time>
       </div>
-      <div className="relative border-s-2 border-primary mt-3 pl-4 -start-5 ">
-        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+      <div className="relative border-s-2 border-primary mt-3 pl-4 -start-5 mb-6">
+        <h3 className="text-2xl font-semibold text-text pointer-events-none">
           {secondaryText}
         </h3>
         <p
           ref={ref}
-          className="text-xl font-normal text-gray-500 dark:text-gray-400 line-clamp-2"
+          className="text-xl font-normal text-paragraph line-clamp-2 pointer-events-none"
         >
           {description}
         </p>

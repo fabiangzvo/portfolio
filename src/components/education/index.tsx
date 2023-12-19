@@ -14,25 +14,25 @@ function Education() {
   const items = useMemo(
     () => [
       {
-        icon: <FaClock className="text-secondary" size="1.5em" />,
+        icon: <FaClock className="text-primary" size="1.5em" />,
         primaryText: translations("professionalDate"),
         secondaryText: translations("professionalTitle"),
         description: translations("professionalDescription"),
       },
       {
-        icon: <GiGraduateCap className="text-secondary" size="2em" />,
+        icon: <GiGraduateCap className="text-primary" size="2em" />,
         primaryText: translations("technologistDate"),
         secondaryText: translations("technologistTitle"),
         description: translations("technologistDescription"),
       },
       {
-        icon: <FaStar className="text-secondary" size="2em" />,
+        icon: <FaStar className="text-primary" size="2em" />,
         primaryText: translations("hackathonDate"),
         secondaryText: translations("hackathonTitle"),
         description: translations("hackathonDescription"),
       },
       {
-        icon: <GiGraduateCap className="text-secondary" size="2em" />,
+        icon: <GiGraduateCap className="text-primary" size="2em" />,
         primaryText: translations("technicianDate"),
         secondaryText: translations("technicianTitle"),
         description: translations("technicianDescription"),

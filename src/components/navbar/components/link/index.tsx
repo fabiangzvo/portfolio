@@ -11,7 +11,7 @@ function Link(props: LinkProps) {
 
   return (
     <NextLink href={to}>
-      <li className="flex justify-center underlined max-lg:border-b-2 max-lg:border-tertiary max-lg:pb-3">
+      <li className="flex justify-center max-lg:border-b-2 max-lg:border-tertiary max-lg:pb-3">
         {label}
       </li>
     </NextLink>

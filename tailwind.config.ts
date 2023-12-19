@@ -14,6 +14,11 @@ const config: Config = {
         primary: "var(--primary)",
         secondary: "var(--secondary)",
         tertiary: "var(--tertiary)",
+        paragraph: "var(--paragraph)",
+        buttonText: "var(--buttonText)",
+        stroke: "var(--stroke)",
+        highlight: "var(--highlight)",
+        desktop: "var(--desktop)",
       },
       keyframes: {
         translateToRight: {

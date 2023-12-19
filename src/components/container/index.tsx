@@ -24,7 +24,7 @@ function Container(props: ContainerProps) {
       >
         <h1
           className={cs({
-            "fill-text-transparent pointer-events-none text-text max-sm:w-full text-9xl max-md:text-7xl font-extrabold gradient-text text-4xl text-white font-extrabold bg-clip-text bg-gradient-to-r to-secondary from-primary mb-[0.2em] pr-7":
+            "fill-text-transparent pointer-events-none text-text max-sm:w-full text-9xl max-md:text-7xl font-extrabold gradient-text text-4xl text-white font-extrabold bg-clip-text bg-gradient-to-r to-tertiary from-primary mb-[0.2em] pr-7":
               true,
             [title]: !!title,
           })}
@@ -32,7 +32,7 @@ function Container(props: ContainerProps) {
           {label}
         </h1>
         <span
-          className="w-full text-2xl"
+          className="w-full text-2xl text-paragraph pointer-events-none"
           dangerouslySetInnerHTML={{ __html: description || "" }}
         />
       </div>

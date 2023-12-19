@@ -3,6 +3,8 @@ import { MdOutlineWork } from "react-icons/md";
 import { useTranslations } from "next-intl";
 import { GetStaticPropsContext } from "next";
 
+import Badge from "@components/badge";
+
 import Container from "../container";
 import MilestonesList from "../milestonesList";
 import { MilestoneList } from "../milestonesList/types";
@@ -13,32 +15,30 @@ function Experience() {
   const items = useMemo<MilestoneList>(
     () => [
       {
-        icon: <MdOutlineWork className="text-secondary" size="2em" />,
+        icon: <MdOutlineWork className="text-primary" size="2em" />,
         primaryText: (
           <>
             {translations("zenviaDate")} &nbsp;
-            <span className="bg-primary text-secondary text-sm font-medium me-2 px-2.5 py-0.5 rounded">
-              {translations("currently")}
-            </span>
+            <Badge label={translations("currently")} />
           </>
         ),
         secondaryText: translations("zenviaPosition"),
         description: translations("zenviaDescription"),
       },
       {
-        icon: <MdOutlineWork className="text-secondary" size="2em" />,
+        icon: <MdOutlineWork className="text-primary" size="2em" />,
         primaryText: translations("andikemDate"),
         secondaryText: translations("andikemPosition"),
         description: translations("andikemDescription"),
       },
       {
-        icon: <MdOutlineWork className="text-secondary" size="2em" />,
+        icon: <MdOutlineWork className="text-primary" size="2em" />,
         primaryText: translations("licimaticDate"),
         secondaryText: translations("licimaticPosition"),
         description: translations("licimaticDescription"),
       },
       {
-        icon: <MdOutlineWork className="text-secondary" size="2em" />,
+        icon: <MdOutlineWork className="text-primary" size="2em" />,
         primaryText: translations("swatitDate"),
         secondaryText: translations("swatitPosition"),
         description: translations("swatitDescription"),
