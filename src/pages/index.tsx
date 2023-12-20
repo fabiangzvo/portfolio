@@ -17,12 +17,12 @@ export default function Home() {
 
   return (
     <main
-      className={`w-[90vw] flex min-h-screen flex-col items-center justify-around max-md:w-screen ${inter.className}`}
+      className={`w-full min-h-screen flex flex-col items-center justify-around lg:w-[90vw] max-lg:px-5 ${inter.className}`}
     >
-      <div className="w-full h-[100vh] flex flex-col font-mono text-sm lg:flex">
-        <div className="w-full h-[100vh] items-center justify-center font-mono text-sm lg:flex">
-          <div className="flex flex-col h-full w-full items-start justify-center">
-            <h3 className="pointer-events-none text-paragraph flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0 text-4xl max-md:text-2xl">
+      <div className="w-full min-h-screen flex flex-col font-mono text-sm lg:flex">
+        <div className="w-full min-h-screen items-center justify-center font-mono text-sm lg:flex max-lg:flex max-lg:flex-col">
+          <div className="flex flex-col w-full items-start justify-center max-lg:order-2">
+            <h3 className="pointer-events-none text-paragraph flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0 text-4xl max-md:text-2xl max-lg:pt-[2.5em]">
               {translation("greeting")}
             </h3>
             <h1 className="pointer-events-none text-text w-full text-9xl max-md:text-7xl font-extrabold">
@@ -35,11 +35,11 @@ export default function Home() {
               {translation("description")}
             </h3>
           </div>
-          <div className="flex flex-col h-full w-1/2 items-center justify-center">
+          <div className="flex items-center justify-center max-lg:order-first">
             <Dev />
           </div>
         </div>
-        <SocialNetwork />
+        <SocialNetwork containerClass="max-lg:order-last" />
       </div>
       <About />
       <Education />

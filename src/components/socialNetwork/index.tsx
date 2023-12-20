@@ -1,8 +1,20 @@
+import cs from "classnames";
 import { FaLinkedin, FaXTwitter, FaGithub } from "react-icons/fa6";
 
-function SocialNetwork() {
+interface SocialNetworkProps {
+  containerClass?: string;
+}
+
+function SocialNetwork(props: SocialNetworkProps) {
+  const { containerClass = "" } = props;
+
   return (
-    <div className="w-40 flex justify-between text-4xl pb-5">
+    <div
+      className={cs({
+        "w-40 flex justify-between text-4xl pb-5": true,
+        [containerClass]: !!containerClass,
+      })}
+    >
       <a
         href="https://www.linkedin.com/in/fabiangzvo"
         target="_blank"

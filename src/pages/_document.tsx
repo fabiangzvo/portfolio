@@ -6,7 +6,7 @@ export default function Document() {
   return (
     <Html suppressHydrationWarning>
       <Head />
-      <body className="w-full flex flex-col justify-center items-center">
+      <body className="absolute lg:w-full flex flex-col justify-center items-center">
         <Main />
         <NextScript />
         <Footer />

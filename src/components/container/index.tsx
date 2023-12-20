@@ -18,14 +18,14 @@ function Container(props: ContainerProps) {
     const titleComponent = (
       <div
         className={cs({
-          "w-[60vw] mb-10 max-lg:w-full max-2xl:order-first max-md:w-screen":
+          "w-[60vw] mb-10 max-lg:w-full max-2xl:order-first max-md:w-full":
             true,
           [containerTitle]: !!containerTitle,
         })}
       >
         <h1
           className={cs({
-            "fill-text-transparent pointer-events-none text-text max-sm:w-full text-9xl max-md:text-7xl font-extrabold gradient-text text-4xl font-extrabold bg-clip-text bg-gradient-to-r to-tertiary from-primary mb-[0.2em] pr-7":
+            "fill-text-transparent pointer-events-none text-text font-extrabold gradient-text bg-clip-text bg-gradient-to-r to-tertiary from-primary mb-[0.2em] pr-7 max-sm:w-full text-9xl max-md:text-7xl max-md:w-full":
               true,
             [title]: !!title,
           })}
