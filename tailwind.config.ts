@@ -33,6 +33,9 @@ const config: Config = {
       animation: {
         translateToRight: "translateToRight 2s ease-in-out infinite",
       },
+      fontFamily: {
+        albertSans: ["var(--albert-sans)"],
+      },
     },
   },
   darkMode: "class",

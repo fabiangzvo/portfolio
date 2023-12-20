@@ -28,7 +28,7 @@ function Dropdown(props: DropdownProps) {
       <button
         id="dropdown"
         data-dropdown-toggle="dropdown"
-        className="l-3 w-48 max-lg:w-25 border border-primary rounded-xl text-text bg-transparent font-medium text-sm px-5 py-2.5  inline-flex items-center justify-around"
+        className="l-3 min-w-48 border-2 border-primary self-center rounded-xl text-text bg-transparent font-medium text-sm px-5 py-2.5 inline-flex items-center justify-around max-lg:w-25 max-lg:text-3xl"
         type="button"
         onClick={handleShowOptions}
       >

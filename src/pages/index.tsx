@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Sansita_Swashed, Albert_Sans } from "next/font/google";
 import { GetStaticPropsContext } from "next";
 
 import Education from "@components/education";
@@ -8,12 +8,15 @@ import Contact from "@components/contact";
 import About from "@components/about";
 import Greeting from "@components/greeting";
 
-const inter = Inter({ subsets: ["latin"] });
+const AlbertSans = Albert_Sans({
+  subsets: ["latin"],
+  variable: "--albert-sans",
+});
 
-export default function Home(props: any) {
+export default function Home() {
   return (
     <main
-      className={`w-full min-h-screen flex flex-col items-center justify-around lg:w-[90vw] max-lg:px-5 ${inter.className}`}
+      className={`w-full min-h-screen flex flex-col items-center justify-around lg:w-[90vw] max-lg:px-5 ${AlbertSans.variable}`}
     >
       <Greeting />
       <About />

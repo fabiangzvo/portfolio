@@ -12,15 +12,15 @@ function Card(props: CardProps) {
   const translations = useTranslations("portfolio");
 
   return (
-    <div className="max-w-sm bg-background border border-stroke rounded-lg shadow-md shadow-stroke max-h-xl hover:shadow hover:shadow-stroke hover:shadow-xl transition-all z-10">
+    <div className="max-w-sm bg-background border border-stroke rounded-lg shadow-md shadow-stroke max-h-xl hover:shadow-stroke hover:shadow-xl transition-all z-10 max-md:max-w-md">
       <Image
-        className="rounded-t-lg h-[15vh]"
+        className="rounded-t-lg h-[15vh] max-md:h-[25vh] max-md:w-full"
         src={imageUrl}
         alt={title}
         width={390}
         height={300}
       />
-      <div className="p-5 h-[25vh] flex flex-col justify-between">
+      <div className="p-5 h-[25vh] flex flex-col justify-between max-md:h-[40vh]">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-text">
           {title}&nbsp;
           {isWork && <Badge label={translations("work")} />}

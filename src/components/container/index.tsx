@@ -25,7 +25,7 @@ function Container(props: ContainerProps) {
       >
         <h1
           className={cs({
-            "fill-text-transparent pointer-events-none text-text font-extrabold gradient-text bg-clip-text bg-gradient-to-r to-tertiary from-primary mb-[0.2em] pr-7 max-sm:w-full text-9xl max-md:text-7xl max-md:w-full":
+            "font-albertSans pointer-events-none font-extrabold fill-text-transparent bg-clip-text bg-gradient-to-r to-tertiary from-primary mb-[0.2em] pr-7 max-sm:w-full text-9xl max-md:text-7xl max-md:w-full":
               true,
             [title]: !!title,
           })}
@@ -52,7 +52,7 @@ function Container(props: ContainerProps) {
     <div
       id={id}
       className={cs({
-        "w-full min-h-[100vh] flex justify-center font-mono text-xl 2xl:items-center max-2xl:flex-col":
+        "w-full min-h-[100vh] flex justify-center font-albertSans text-xl 2xl:items-center max-2xl:flex-col":
           true,
         [container]: !!container,
       })}

@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import cs from "classnames";
 
 import Link from "../link";
@@ -10,6 +11,11 @@ type ListOfLinksProps = {
 function ListOfLinks(props: ListOfLinksProps) {
   const { hide, items } = props;
 
+  const links = useMemo(
+    () => items.map((item, key) => <Link key={key} {...item} />),
+    [items]
+  );
+
   return (
     <div
       className={cs({
@@ -20,9 +26,7 @@ function ListOfLinks(props: ListOfLinksProps) {
       suppressHydrationWarning
     >
       <ul className="flex justify-around w-full max-lg:flex-col h-auto duration-300 transition-all">
-        {items.map((item, key) => (
-          <Link key={key} {...item} />
-        ))}
+        {links}
       </ul>
     </div>
   );

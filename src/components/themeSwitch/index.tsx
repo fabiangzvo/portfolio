@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { useTheme } from "next-themes";
 import { FaMoon as Moon, FaSun as Sun } from "react-icons/fa";
 
@@ -6,25 +7,19 @@ import Button from "./components/button";
 function ThemeSwitch() {
   const { theme, setTheme } = useTheme();
 
+  const handleClick = useCallback<React.MouseEventHandler<HTMLElement>>(
+    () => setTheme(theme === "light" ? "dark" : "light"),
+    [theme, setTheme]
+  );
+
   return (
     <div
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="flex items-center border-primary border-[0.25rem] bg-primary rounded-full h-[3vh] w-[3vw] xl:h-[3vh] xl:w-[4vw] 2xl:w-[4vw] transition-all	transition ease-in-out xl:h-[3vh] xl:w-[3vw] max-lg:h-[40px] max-lg:w-[50px] max-xl:border-[2px]"
+      onClick={handleClick}
+      className="flex items-center border-primary border-2 bg-primary rounded-full h-10 w-10 max-lg:h-16 max-lg:w-16"
     >
       <Button
-        classes={{
-          container: theme === "light" ? "sm:flex" : "max-xl:hidden",
-        }}
-        Icon={Sun}
-        isRight
-        disable={theme === "light"}
-      />
-      <Button
-        classes={{
-          container: theme !== "light" ? "sm:flex" : "max-xl:hidden",
-        }}
-        Icon={Moon}
-        disable={theme !== "light"}
+        classes={{ container: "h-9 w-9 max-lg:h-[3.8rem] max-lg:w-[3.8rem]" }}
+        Icon={theme === "light" ? Sun : Moon}
       />
     </div>
   );

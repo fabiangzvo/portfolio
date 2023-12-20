@@ -6,7 +6,8 @@
     "english": "Inglés",
     "portuguese": "Portugués",
     "viewLess": "Ver menos",
-    "viewMore": "Ver más"
+    "viewMore": "Ver más",
+    "developer": "soy desarrollador Full Stack"
   },
   "navbar": {
     "about": "Sobre mi",
@@ -72,6 +73,6 @@
     "send": "Enviar",
     "label": "Vamos a trabajar juntos!",
     "contact": "Hablemos",
-    "description": "Como web developer, ofrezco habilidades técnicas sólidas y un enfoque creativo para impulsar la innovación.Estoy entusiasmado por colaborar en proyectos desafiantes.<br /><br />¡Juntos podemos construir soluciones impactantes que trasciendan lasexpectativas!"
+    "description": "Como web developer, ofrezco habilidades técnicas sólidas y un enfoque creativo para impulsar la innovación.Estoy entusiasmado por colaborar en proyectos desafiantes.<br /><br />¡Juntos podemos construir soluciones impactantes que trasciendan las expectativas!"
   }
 }

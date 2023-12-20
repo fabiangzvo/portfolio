@@ -48,6 +48,7 @@ function MilestoneItem(props: MilestoneItemProps) {
         </p>
         <button
           className={cs({
+            "font-extrabold": true,
             invisible: disableViewMore,
           })}
           onClick={handleClick}

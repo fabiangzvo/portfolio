@@ -8,7 +8,7 @@ function Dev() {
       viewBox="0 0 671 585"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="scale-125 max-xl:scale-75"
+      className="max-xl:scale-75 xl:scale-100"
     >
       <g clipPath="url(#clip0_73_2)">
         <path
