@@ -65,7 +65,7 @@ function Navbar() {
       <ListOfLinks hide={!showMenu && isSm} items={menu} />
       <div
         className={cs({
-          "flex w-[13vw] lg:w-[15vw] justify-between flex max-lg:w-full max-lg:order-1 order-none	max-lg:order-5":
+          "flex w-[13vw] lg:w-[15vw] justify-between max-lg:w-full max-lg:order-1 order-none max-lg:order-5":
             true,
           hidden: !showMenu && isSm,
         })}
