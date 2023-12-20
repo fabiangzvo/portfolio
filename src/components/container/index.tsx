@@ -18,13 +18,14 @@ function Container(props: ContainerProps) {
     const titleComponent = (
       <div
         className={cs({
-          "w-[60vw] max-lg:w-full max-2xl:order-first mb-10": true,
+          "w-[60vw] mb-10 max-lg:w-full max-2xl:order-first max-md:w-screen":
+            true,
           [containerTitle]: !!containerTitle,
         })}
       >
         <h1
           className={cs({
-            "fill-text-transparent pointer-events-none text-text max-sm:w-full text-9xl max-md:text-7xl font-extrabold gradient-text text-4xl text-white font-extrabold bg-clip-text bg-gradient-to-r to-tertiary from-primary mb-[0.2em] pr-7":
+            "fill-text-transparent pointer-events-none text-text max-sm:w-full text-9xl max-md:text-7xl font-extrabold gradient-text text-4xl font-extrabold bg-clip-text bg-gradient-to-r to-tertiary from-primary mb-[0.2em] pr-7":
               true,
             [title]: !!title,
           })}
@@ -51,7 +52,7 @@ function Container(props: ContainerProps) {
     <div
       id={id}
       className={cs({
-        "w-full min-h-[100vh] justify-center 2xl:items-center font-mono text-xl 2xl:flex max-2xl:flex max-2xl:flex-col":
+        "w-full min-h-[100vh] flex justify-center font-mono text-xl 2xl:items-center max-2xl:flex-col":
           true,
         [container]: !!container,
       })}

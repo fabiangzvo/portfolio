@@ -1,4 +1,3 @@
-import React from "react";
 import { GetStaticPropsContext } from "next";
 import { useTranslations } from "next-intl";
 

@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <main
-      className={`w-[90vw] flex min-h-screen flex-col items-center justify-around ${inter.className}`}
+      className={`w-[90vw] flex min-h-screen flex-col items-center justify-around max-md:w-screen ${inter.className}`}
     >
       <div className="w-full h-[100vh] flex flex-col font-mono text-sm lg:flex">
         <div className="w-full h-[100vh] items-center justify-center font-mono text-sm lg:flex">
@@ -35,7 +35,7 @@ export default function Home() {
               {translation("description")}
             </h3>
           </div>
-          <div className="flex flex-col h-full w-1/2 items-center justify-center from-white">
+          <div className="flex flex-col h-full w-1/2 items-center justify-center">
             <Dev />
           </div>
         </div>

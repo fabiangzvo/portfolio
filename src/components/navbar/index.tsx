@@ -45,11 +45,11 @@ function Navbar() {
   );
 
   return (
-    <nav className="w-full z-[2000] bg-background fixed flex justify-around py-4 text-xl max-lg:flex-col max-lg:justify-center ">
-      <div className="flex justify-center align-middle gap-4 max-lg:order-1 max-lg:w-full order-none max-xl:justify-between">
+    <nav className="w-full z-[2000] bg-background fixed flex justify-around py-4 text-xl start-0 max-lg:flex-col max-lg:justify-center max-lg:px-5">
+      <div className="flex justify-center align-middle gap-4 max-lg:order-1 order-none max-xl:justify-between">
         <Link
           href="/"
-          className="block transition text-text whitespace-nowrap font-medium focus:outline-none max-lg:flex max-lg:justify-center max-lg:w-full"
+          className="block transition text-text whitespace-nowrap font-medium focus:outline-none max-lg:flex max-lg:justify-center"
         >
           <h1 className="max-lg:flex max-xl:justify-start max-lg:w-full underlined cursor-pointer bg-clip-text fill-text-transparent bg-gradient-to-r to-tertiary from-primary">
             Fabián Guzmán Otavo
@@ -69,6 +69,7 @@ function Navbar() {
             true,
           hidden: !showMenu && isSm,
         })}
+        suppressHydrationWarning
       >
         <LanguageDropdown />
         <ThemeSwitch />
