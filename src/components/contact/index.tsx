@@ -1,11 +1,75 @@
-import React from "react";
-import { GetStaticPropsContext } from "next";
-import { useTranslations } from "next-intl";
+"use client";
 
+import { useCallback, useState } from "react";
+import { useTranslations } from "next-intl";
+import { IoShieldCheckmark } from "react-icons/io5";
+import { MdOutlineError } from "react-icons/md";
+import { FaArrowDown } from "react-icons/fa";
+import { FaArrowUp } from "react-icons/fa";
+
+import Toast from "@components/toast";
 import Container from "../container";
+import ScrollButton from "./components/scrollButton";
+import { ToastProps } from "@components/toast/types";
+import Form from "./components/form";
 
 function Contact() {
   const translations = useTranslations("contact");
+  const [toast, setToast] = useState<null | Partial<ToastProps>>(null);
+
+  const onclose = useCallback(() => setToast(null), []);
+
+  const handleClick = useCallback<React.MouseEventHandler<HTMLFormElement>>(
+    async (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const isBottom =
+        window.innerHeight + Math.round(window.scrollY) >=
+        document.body.offsetHeight;
+
+      const data = {
+        email: e.currentTarget.email.value,
+        name: e.currentTarget.contactName.value,
+        data: e.currentTarget.message.value,
+      };
+
+      const { status } = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify(data),
+      });
+
+      if (status === 200) {
+        setToast({
+          content: translations("mailSent"),
+          icon: <IoShieldCheckmark className="text-green-800 text-6xl" />,
+        });
+
+        return;
+      }
+
+      const icon = isBottom ? (
+        <FaArrowUp className="font-extrabold" />
+      ) : (
+        <FaArrowDown className="font-extrabold" />
+      );
+
+      setToast({
+        content: (
+          <>
+            {translations("mailFailed")}&nbsp;
+            <ScrollButton
+              callback={onclose}
+              scrollTo={isBottom ? "up" : "down"}
+              label={icon}
+            />
+          </>
+        ),
+        icon: <MdOutlineError className="text-red-800 text-5xl" />,
+      });
+    },
+    [onclose, translations]
+  );
 
   return (
     <Container
@@ -18,63 +82,17 @@ function Contact() {
           "max-2xl:w-full max-xl:flex-column max-xl:items-center max-xl:justify-center xl:mr-10 mb-10",
       }}
     >
-      <form
-        className="flex flex-col w-full bg-background border border-stroke rounded-xl px-[6em] py-[6em] shadow-lg shadow-stroke"
-        action="submit"
-      >
-        <h1 className="pointer-events-none text-paragraph w-full text-center text-3xl font-extrabold w-full font-extrabold mb-10">
-          {translations("contact")}
-        </h1>
-        <div className="mb-10">
-          <label htmlFor="name" className="block mb-2 text-xl text-text">
-            {translations("name")}
-          </label>
-          <input
-            type="text"
-            id="name"
-            className="bg-stroke text-lg rounded-lg block w-full p-2.5"
-            placeholder="Fabián Guzmán O."
-            required
-          />
-        </div>
-        <div className="mb-10">
-          <label htmlFor="email" className="block mb-2 text-xl text-text">
-            {translations("email")}
-          </label>
-          <input
-            type="email"
-            id="email"
-            className="bg-stroke text-lg rounded-lg block w-full p-2.5"
-            placeholder="example@example.com"
-            required
-          />
-        </div>
-        <div className="mb-10">
-          <label htmlFor="message" className="block mb-2 text-xl text-text">
-            {translations("message")}
-          </label>
-          <textarea
-            id="message"
-            className="bg-stroke text-lg rounded-lg block w-full p-2.5"
-            placeholder={translations("messagePlaceholder")}
-          ></textarea>
-        </div>
-        <button className="relative w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-xl font-medium text-text rounded-lg group bg-gradient-to-br from-secondary to-primary group-hover:from-primary group-hover:to-secondary focus:ring-4 focus:outline-none focus:ring-primary">
-          <span className="relative text-text w-full px-5 py-2.5 transition-all ease-in duration-75 bg-background rounded-md group-hover:bg-transparent group-hover:text-buttonText">
-            {translations("send")}
-          </span>
-        </button>
-      </form>
+      <Form handleClick={handleClick} />
+      {toast && (
+        <Toast
+          content={toast.content}
+          icon={toast.icon}
+          timing={4000}
+          reset={onclose}
+        />
+      )}
     </Container>
   );
-}
-
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  return {
-    props: {
-      messages: (await import(`../../../translations/${locale}.json`)).default,
-    },
-  };
 }
 
 export default Contact;
