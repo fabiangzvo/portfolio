@@ -32,23 +32,23 @@ function MilestoneItem(props: MilestoneItemProps) {
     <li className="ms-4 h-full">
       <div className="flex items-end">
         <div className="absolute -start-6 flex justify-center">{icon}</div>
-        <time className="pointer-events-none text-lg font-normal leading-none text-gray-400 dark:text-gray-500 pl-2">
+        <time className="pointer-events-none text-lg font-normal leading-none text-gray-400 dark:text-gray-500 pl-2 max-md:text-3xl">
           {primaryText}
         </time>
       </div>
       <div className="relative border-s-2 border-primary mt-3 pl-4 -start-5 mb-6">
-        <h3 className="text-2xl font-semibold text-text pointer-events-none">
+        <h3 className="text-2xl font-semibold text-text pointer-events-none max-md:text-4xl">
           {secondaryText}
         </h3>
         <p
           ref={ref}
-          className="text-xl font-normal text-paragraph line-clamp-2 pointer-events-none"
+          className="text-xl font-normal text-paragraph line-clamp-2 pointer-events-none max-md:text-3xl"
         >
           {description}
         </p>
         <button
           className={cs({
-            "font-extrabold": true,
+            "font-extrabold max-md:text-4xl": true,
             invisible: disableViewMore,
           })}
           onClick={handleClick}

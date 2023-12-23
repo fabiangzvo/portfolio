@@ -23,7 +23,7 @@ function Greeting() {
             {translation("description")}
           </h3>
         </div>
-        <div className="flex items-center justify-center max-lg:order-first">
+        <div className="flex items-center justify-center max-lg:order-first max-md:py-10">
           <Dev />
         </div>
       </div>

@@ -4,8 +4,10 @@ function Footer() {
   return (
     <footer className="w-[90vw] flex justify-between items-between pb-5 max-lg:w-[95%]">
       <div className="flex flex-col pointer-events-none">
-        <span className="font-extrabold text-2xl">Fabián Guzmán Otavo.</span>
-        <p>All rights reserved © 2023</p>
+        <span className="font-extrabold text-2xl max-md:text-4xl">
+          Fabián Guzmán Otavo.
+        </span>
+        <p className="max-md:text-2xl">All rights reserved © 2023</p>
       </div>
       <div>
         <SocialNetwork />

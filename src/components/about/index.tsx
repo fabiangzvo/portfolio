@@ -18,7 +18,7 @@ function About() {
       }}
     >
       <span
-        className="w-full text-2xl"
+        className="w-full text-2xl max-md:text-4xl"
         dangerouslySetInnerHTML={{ __html: translations("description") }}
       />
     </Container>
