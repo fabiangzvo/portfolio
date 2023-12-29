@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import { motion, Variants, Spring } from "framer-motion";
 import cs from "classnames";
 
 type ContainerProps = {
@@ -8,6 +9,23 @@ type ContainerProps = {
   description?: undefined | TrustedHTML;
   rightTitle?: boolean;
   classes?: { container?: string; title?: string; containerTitle?: string };
+};
+
+const transition: Spring = {
+  type: "spring",
+  bounce: 0.4,
+  duration: 1,
+};
+
+const contentVariants: Variants = {
+  offscreen: {
+    opacity: 0,
+    transition,
+  },
+  onscreen: {
+    opacity: 1,
+    transition,
+  },
 };
 
 function Container(props: ContainerProps) {
@@ -56,7 +74,12 @@ function Container(props: ContainerProps) {
   }, [containerTitle, title, label, description, children, rightTitle]);
 
   return (
-    <div
+    <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.5 }}
+      variants={contentVariants}
+      key={id}
       id={id}
       className={cs({
         "w-full min-h-[100vh] flex justify-center font-albertSans text-xl 2xl:items-center max-2xl:flex-col":
@@ -66,7 +89,7 @@ function Container(props: ContainerProps) {
     >
       {leftContent}
       {rightContent}
-    </div>
+    </motion.div>
   );
 }
 

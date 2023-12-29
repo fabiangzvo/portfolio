@@ -9,7 +9,7 @@ import ThemeSwitch from "@components/themeSwitch";
 import { useMediaQuery } from "@hooks/useMediaquery";
 
 import ListOfLinks from "./components/listOfLinks";
-import items from "./utils/menuItems.json";
+import items from "@shared/menuItems.json";
 import { MenuItemProps } from "./types";
 
 type MenuType = Array<MenuItemProps>;

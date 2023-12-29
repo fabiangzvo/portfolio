@@ -1,5 +1,6 @@
 import { Albert_Sans } from "next/font/google";
 import { GetStaticPropsContext } from "next";
+import { AnimatePresence } from "framer-motion";
 
 import Education from "@components/education";
 import Experience from "@components/experience";
@@ -18,12 +19,14 @@ export default function Home() {
     <main
       className={`w-full min-h-screen flex flex-col items-center justify-around lg:w-[90vw] max-lg:px-5 ${AlbertSans.variable}`}
     >
-      <Greeting />
-      <About />
-      <Experience />
-      <Education />
-      <Portfolio />
-      <Contact />
+      <AnimatePresence mode="wait">
+        <Greeting />
+        <About />
+        <Experience />
+        <Education />
+        <Portfolio />
+        <Contact />
+      </AnimatePresence>
     </main>
   );
 }
