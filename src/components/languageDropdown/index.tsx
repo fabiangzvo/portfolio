@@ -1,4 +1,3 @@
-import { GetStaticPropsContext } from "next";
 import { useCallback, useMemo } from "react";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
@@ -44,14 +43,6 @@ function LanguageDropdown(props: DropdownProps) {
   }, [translation, router]);
 
   return <Dropdown label={label} options={options} handleClick={handelClick} />;
-}
-
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  return {
-    props: {
-      messages: (await import(`../../../translations/${locale}.json`)).default,
-    },
-  };
 }
 
 export default LanguageDropdown;

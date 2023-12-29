@@ -1,0 +1,23 @@
+[
+  {
+    "label": "about",
+    "href": "#about"
+  },
+  {
+    "label": "experience",
+    "href": "#experience"
+  },
+  {
+    "label": "education",
+    "href": "#education"
+  },
+
+  {
+    "label": "portfolio",
+    "href": "#portfolio"
+  },
+  {
+    "label": "contact",
+    "href": "#contact"
+  }
+]

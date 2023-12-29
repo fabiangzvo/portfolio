@@ -2,10 +2,11 @@ import { useMemo } from "react";
 import cs from "classnames";
 
 import Link from "../link";
+import { MenuItemProps } from "../../types";
 
 type ListOfLinksProps = {
   hide: boolean;
-  items: Array<{ label: string; to: string }>;
+  items: Array<MenuItemProps>;
 };
 
 function ListOfLinks(props: ListOfLinksProps) {

@@ -1,7 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
-import Footer from "@components/footer";
-
 export default function Document() {
   return (
     <Html suppressHydrationWarning>
@@ -9,7 +7,6 @@ export default function Document() {
       <body className="absolute lg:w-full flex flex-col justify-center items-center">
         <Main />
         <NextScript />
-        <Footer />
       </body>
     </Html>
   );

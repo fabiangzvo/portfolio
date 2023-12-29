@@ -1,4 +1,3 @@
-import { GetStaticPropsContext } from "next";
 import { useTranslations } from "next-intl";
 
 import Container from "../container";
@@ -23,14 +22,6 @@ function About() {
       />
     </Container>
   );
-}
-
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  return {
-    props: {
-      messages: (await import(`../../../translations/${locale}.json`)).default,
-    },
-  };
 }
 
 export default About;

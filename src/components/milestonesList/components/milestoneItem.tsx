@@ -1,6 +1,5 @@
 import React, { useRef, useCallback, useState } from "react";
 import { useTranslations } from "next-intl";
-import { GetStaticPropsContext } from "next";
 import cs from "classnames";
 
 import { MilestoneItemProps } from "../types";
@@ -58,15 +57,6 @@ function MilestoneItem(props: MilestoneItemProps) {
       </div>
     </li>
   );
-}
-
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  return {
-    props: {
-      messages: (await import(`../../../../translations/${locale}.json`))
-        .default,
-    },
-  };
 }
 
 export default MilestoneItem;

@@ -1,4 +1,3 @@
-import { GetStaticPropsContext } from "next";
 import { useTranslations } from "next-intl";
 
 import Dev from "@components/icons/dev";
@@ -30,14 +29,6 @@ function Greeting() {
       <SocialNetwork />
     </div>
   );
-}
-
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  return {
-    props: {
-      messages: (await import(`../../../translations/${locale}.json`)).default,
-    },
-  };
 }
 
 export default Greeting;

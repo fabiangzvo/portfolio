@@ -1,4 +1,4 @@
-import { Sansita_Swashed, Albert_Sans } from "next/font/google";
+import { Albert_Sans } from "next/font/google";
 import { GetStaticPropsContext } from "next";
 
 import Education from "@components/education";
@@ -20,8 +20,8 @@ export default function Home() {
     >
       <Greeting />
       <About />
-      <Education />
       <Experience />
+      <Education />
       <Portfolio />
       <Contact />
     </main>

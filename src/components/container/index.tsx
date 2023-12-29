@@ -39,7 +39,14 @@ function Container(props: ContainerProps) {
       </div>
     );
     const content = (
-      <div className="w-full max-2xl:order-last mb-10">{children}</div>
+      <div
+        className={cs({
+          "w-full max-2xl:order-last mb-10": true,
+          "mr-10": rightTitle,
+        })}
+      >
+        {children}
+      </div>
     );
 
     return {

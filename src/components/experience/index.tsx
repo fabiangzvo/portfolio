@@ -1,7 +1,6 @@
 import { useMemo } from "react";
 import { MdOutlineWork } from "react-icons/md";
 import { useTranslations } from "next-intl";
-import { GetStaticPropsContext } from "next";
 
 import Badge from "@components/badge";
 
@@ -62,14 +61,6 @@ function Experience() {
       <MilestonesList list={items} />
     </Container>
   );
-}
-
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  return {
-    props: {
-      messages: (await import(`../../../translations/${locale}.json`)).default,
-    },
-  };
 }
 
 export default Experience;

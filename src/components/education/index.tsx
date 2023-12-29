@@ -2,7 +2,6 @@ import React, { useMemo } from "react";
 import { GiGraduateCap } from "react-icons/gi";
 import { FaStar } from "react-icons/fa6";
 import { FaClock } from "react-icons/fa";
-import { GetStaticPropsContext } from "next";
 import { useTranslations } from "next-intl";
 
 import Container from "../container";
@@ -55,14 +54,6 @@ function Education() {
       <MilestonesList list={items} disableViewMore />
     </Container>
   );
-}
-
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  return {
-    props: {
-      messages: (await import(`../../../translations/${locale}.json`)).default,
-    },
-  };
 }
 
 export default Education;

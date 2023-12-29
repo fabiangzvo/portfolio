@@ -6,6 +6,7 @@ import { ThemeProvider } from "next-themes";
 
 import Navbar from "@components/navbar";
 import { useProviders } from "@hooks/useProviders";
+import Footer from "@components/footer";
 
 import "../styles/globals.css";
 import "../styles/keyframes.css";
@@ -25,14 +26,15 @@ export default function App({ Component, pageProps }: AppProps) {
   ]);
 
   useEffect(() => {
-    setProviders({
-      action: "add",
-      provider: {
-        name: "theme",
-        Component: ThemeProvider,
-        config: { attribute: "class", defaultTheme: "light" },
-      },
-    });
+    setProviders &&
+      setProviders({
+        action: "add",
+        provider: {
+          name: "theme",
+          Component: ThemeProvider,
+          config: { attribute: "class", defaultTheme: "light" },
+        },
+      });
   }, [setProviders]);
 
   useEffect(() => {
@@ -47,9 +49,12 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [router.locale, setProviders, pageProps.messages]);
 
   return (
-    <Providers>
-      <Navbar />
-      <Component {...pageProps} />
-    </Providers>
+    <div className="flex flex-col">
+      <Providers>
+        <Navbar />
+        <Component {...pageProps} />
+      </Providers>
+      <Footer />
+    </div>
   );
 }

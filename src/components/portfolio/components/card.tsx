@@ -1,6 +1,5 @@
 import Image from "next/image";
 import cs from "classnames";
-import { GetStaticPropsContext } from "next";
 import { useTranslations } from "next-intl";
 
 import Badge from "@components/badge";
@@ -62,15 +61,6 @@ function Card(props: CardProps) {
       </div>
     </div>
   );
-}
-
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  return {
-    props: {
-      messages: (await import(`../../../../translations/${locale}.json`))
-        .default,
-    },
-  };
 }
 
 export default Card;
