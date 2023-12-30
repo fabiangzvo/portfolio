@@ -7,12 +7,12 @@ function Option(props: OptionProps) {
 
   return (
     <li value={value} onClick={handleClick}>
-      <a
+      <span
         className="cursor-pointer block px-4 py-2 hover:bg-stroke max-lg:text-3xl"
         data-value={value}
       >
         {label}
-      </a>
+      </span>
     </li>
   );
 }

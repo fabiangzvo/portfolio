@@ -1,5 +1,5 @@
 import { Albert_Sans } from "next/font/google";
-import { GetStaticPropsContext, Metadata } from "next";
+import { GetStaticPropsContext } from "next";
 import { AnimatePresence } from "framer-motion";
 
 import Education from "@components/education";
@@ -8,22 +8,19 @@ import Portfolio from "@components/portfolio";
 import Contact from "@components/contact";
 import About from "@components/about";
 import Greeting from "@components/greeting";
+import Head from "@components/head";
 
 const AlbertSans = Albert_Sans({
   subsets: ["latin"],
   variable: "--albert-sans",
 });
 
-export const metadata: Metadata = {
-  title: "fabiangzvo",
-  description: "this portfolio of Fabián Guzmán Otavo - @fabiangzvo",
-};
-
 export default function Home() {
   return (
     <main
       className={`w-full min-h-screen flex flex-col items-center justify-around lg:w-[90vw] max-lg:px-5 ${AlbertSans.variable}`}
     >
+      <Head />
       <AnimatePresence mode="wait">
         <Greeting />
         <About />
