@@ -6,7 +6,12 @@ const nextConfig = {
     defaultLocale: "es",
   },
   images: {
-    domains: ["comunidad.socialab.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "comunidad.socialab.com",
+      },
+    ],
   },
 };
 

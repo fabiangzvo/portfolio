@@ -21,6 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
         locale: router.locale,
         messages: pageProps.messages,
         timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        onError: () => {},
       },
     },
   ]);

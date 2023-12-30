@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: "https://fabiangzvo.netlify.com",
+      url: "https://fabiangzvo.netlify.com/",
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 1,
