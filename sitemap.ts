@@ -2,9 +2,9 @@ import { MetadataRoute } from "next";
 
 import menuItems from "@shared/menuItems.json";
 
-const hostname = "https://fabiangzvo.netlify.com/";
-
 export default function sitemap(): MetadataRoute.Sitemap {
+  const hostname = "https://fabiangzvo.netlify.com/";
+
   const sitemapItems = menuItems.map(({ href }) => ({
     url: hostname + href,
     lastModified: new Date(),
@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: "https://fabiangzvo.netlify.com/",
+      url: hostname,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 1,
