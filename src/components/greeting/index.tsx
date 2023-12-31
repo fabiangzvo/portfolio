@@ -10,17 +10,17 @@ function Greeting() {
     <div className="w-full min-h-screen flex flex-col text-sm lg:flex">
       <div className="w-full h-full items-center justify-center text-sm flex font-albertSans max-lg:flex-col max-lg:mb-[9em]">
         <div className="flex flex-col w-full items-start justify-center max-lg:order-last">
-          <h3 className="pointer-events-none text-paragraph text-5xl w-full max-lg:text-center">
+          <h2 className="pointer-events-none text-paragraph text-5xl w-full max-lg:text-center">
             {translation("greeting")}
-          </h3>
+          </h2>
           <h1 className="pointer-events-none text-text w-full text-8xl font-extrabold max-lg:text-center max-md:text-7xl">
             Fabián Guzmán Otavo,
           </h1>
-          <h3 className="pointer-events-none text-paragraph text-5xl w-full max-lg:text-center">
+          <h2 className="pointer-events-none text-paragraph text-5xl w-full max-lg:text-center">
             <strong>{translation("developer")}</strong>
             <br />
             {translation("description")}
-          </h3>
+          </h2>
         </div>
         <div className="flex items-center justify-center max-lg:order-first max-md:py-10">
           <Dev />

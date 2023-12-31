@@ -4,6 +4,7 @@ export type DropdownProps = {
   label: string | React.ReactElement;
   options: Options;
   handleClick: React.MouseEventHandler<HTMLElement>;
+  id?: string;
 };
 
 export type OptionListProps = {

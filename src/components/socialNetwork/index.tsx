@@ -19,6 +19,7 @@ function SocialNetwork(props: SocialNetworkProps) {
         href="https://www.linkedin.com/in/fabiangzvo"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="linkedin"
       >
         <FaLinkedin className="cursor-pointer text-text" />
       </a>
@@ -26,6 +27,7 @@ function SocialNetwork(props: SocialNetworkProps) {
         href="https://twitter.com/fabiangzvo"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="twitter"
       >
         <FaXTwitter className="cursor-pointer text-text" />
       </a>
@@ -33,6 +35,7 @@ function SocialNetwork(props: SocialNetworkProps) {
         href="https://github.com/fabiangzvo"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="github"
       >
         <FaGithub className="cursor-pointer text-text" />
       </a>

@@ -32,7 +32,7 @@ function Navbar() {
 
   return (
     <nav className="w-full z-[2000] font-albertSans bg-background fixed flex justify-center py-4 text-xl start-0 max-lg:flex-col max-lg:justify-center max-lg:px-5">
-      <div className="w-[90vw] flex justify-between max-lg:w-full">
+      <div className="w-[90vw] flex justify-between max-lg:w-full max-lg:flex-col">
         <div className="flex justify-center align-middle gap-4 max-lg:order-1 order-none max-xl:justify-between max-lg:w-full">
           <Link
             href="/"

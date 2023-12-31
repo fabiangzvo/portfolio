@@ -42,7 +42,14 @@ function LanguageDropdown(props: DropdownProps) {
     return { options, label };
   }, [translation, router]);
 
-  return <Dropdown label={label} options={options} handleClick={handelClick} />;
+  return (
+    <Dropdown
+      id="translate-dropdown"
+      label={label}
+      options={options}
+      handleClick={handelClick}
+    />
+  );
 }
 
 export default LanguageDropdown;

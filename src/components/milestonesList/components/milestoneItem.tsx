@@ -36,9 +36,9 @@ function MilestoneItem(props: MilestoneItemProps) {
         </time>
       </div>
       <div className="relative border-s-2 border-primary mt-3 pl-4 -start-5 mb-6">
-        <h3 className="text-2xl font-semibold text-text pointer-events-none max-md:text-4xl">
+        <h2 className="text-2xl font-semibold text-text pointer-events-none max-md:text-4xl">
           {secondaryText}
-        </h3>
+        </h2>
         <p
           ref={ref}
           className="text-xl font-normal text-paragraph line-clamp-2 pointer-events-none max-md:text-3xl"

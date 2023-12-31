@@ -20,10 +20,10 @@ function Card(props: CardProps) {
         height={300}
       />
       <div className="p-5 h-[25vh] flex flex-col justify-between max-md:h-[55vh]">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-text max-md:text-4xl">
+        <h2 className="mb-2 text-2xl font-bold tracking-tight text-text max-md:text-4xl">
           {title}&nbsp;
           {isWork && <Badge label={translations("work")} />}
-        </h5>
+        </h2>
         <div className="group flex flex-wrap cursor-default">
           <p
             data-tooltip-target="tooltip-default"
