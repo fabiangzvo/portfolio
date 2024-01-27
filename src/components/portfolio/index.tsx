@@ -17,11 +17,10 @@ function Portfolio() {
         isWork: true,
       },
       {
-        description: translations("licimaticDescription"),
-        title: translations("licimaticTitle"),
-        imageUrl:
-          "https://comunidad.socialab.com/uploads/15856940525e83c56415113.png",
-        isWork: true,
+        description: translations("dummyDescription"),
+        title: translations("dummyTitle"),
+        imageUrl: "/dummy-app.png",
+        link: "https://dummy-social-network.netlify.app",
       },
       {
         description: translations("spotyDescription"),

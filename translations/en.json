@@ -60,8 +60,8 @@
     "visit": "Visit",
     "conversionDescription": "It is a conversational platform that allows communication between customers and companies and enables integration with various tools.",
     "conversionTitle": "Zenvia Conversion",
-    "licimaticDescription": "It is a software that simplifies the entire contracting process for companies, generating easy and economical contracting processes for any company, in addition to providing the tools so that they can have a clean and transparent battle, applying to any call and public bidding.",
-    "licimaticTitle": "Licimatic",
+    "dummyDescription": "Created with Dummy API and social authentication. Share unique moments through images, explore tags, and enjoy an immersive visual interaction experience with your friends.",
+    "dummyTitle": "Dummy social network",
     "spotyTitle": "SpotyClient",
     "spotyDescription": "Explore the evolution of music with our redesigned app, taking the Spotify experience to new levels. Discover an inspiring UI."
   },
