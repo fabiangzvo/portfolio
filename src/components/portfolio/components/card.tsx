@@ -13,13 +13,13 @@ function Card(props: CardProps) {
   return (
     <div className="max-w-sm bg-background border border-stroke rounded-lg shadow-md shadow-stroke max-h-xl hover:shadow-stroke hover:shadow-xl transition-all z-10 max-md:max-w-lg">
       <Image
-        className="rounded-t-lg h-[15vh] max-md:h-[25vh] max-md:w-full"
+        className="rounded-t-lg h-[15vh] max-md:h-[35vh] max-md:w-full"
         src={imageUrl}
         alt={title}
         width={390}
         height={300}
       />
-      <div className="p-5 h-[25vh] flex flex-col justify-between max-md:h-[55vh]">
+      <div className="p-5 min-h-[25vh] flex flex-col justify-between max-md:h-[70vh]">
         <h2 className="mb-2 text-2xl font-bold tracking-tight text-text max-md:text-4xl">
           {title}&nbsp;
           {isWork && <Badge label={translations("work")} />}
@@ -27,7 +27,7 @@ function Card(props: CardProps) {
         <div className="group flex flex-wrap cursor-default">
           <p
             data-tooltip-target="tooltip-default"
-            className="mb-3 text-xl text-paragraph line-clamp-6 max-md:text-4xl"
+            className="mb-3 text-xl text-paragraph line-clamp-6 max-md:text-4xl md:line-clamp-4"
             data-tooltip-placement="top"
           >
             {description}

@@ -17,7 +17,7 @@ function Form(props: FormProps) {
       onSubmit={handleClick}
     >
       <h1 className="pointer-events-none text-paragraph w-full text-center text-3xl font-extrabold mb-10 max-md:text-5xl">
-        {translations("contact")}
+        {translations("label")}
       </h1>
       <Input
         name="contactName"

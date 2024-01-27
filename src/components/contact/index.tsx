@@ -74,7 +74,7 @@ function Contact() {
   return (
     <Container
       id="contact"
-      label={translations("label")}
+      label={translations("contact")}
       description={translations.raw("description")}
       classes={{
         container: "max-xl:flex-column",

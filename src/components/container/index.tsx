@@ -77,7 +77,7 @@ function Container(props: ContainerProps) {
     <motion.div
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ amount: 0.5 }}
+      viewport={{ amount: 0.3 }}
       variants={contentVariants}
       key={id}
       id={id}
