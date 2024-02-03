@@ -63,7 +63,9 @@
     "dummyDescription": "Created with Dummy API and social authentication. Share unique moments through images, explore tags, and enjoy an immersive visual interaction experience with your friends.",
     "dummyTitle": "Dummy social network",
     "spotyTitle": "SpotyClient",
-    "spotyDescription": "Explore the evolution of music with our redesigned app, taking the Spotify experience to new levels. Discover an inspiring UI."
+    "spotyDescription": "Explore the evolution of music with our redesigned app, taking the Spotify experience to new levels. Discover an inspiring UI.",
+    "quizzifyTitle":"Quizzify",
+    "quizzifyDescription":" Challenge your mind with fun and educational questions across a wide range of topics. Compete with friends, track your progress, and become an expert while having a blast."
   },
   "contact": {
     "email": "Email",
