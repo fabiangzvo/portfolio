@@ -25,9 +25,10 @@ function Portfolio() {
       {
         description: translations("spotyDescription"),
         title: translations("spotyTitle"),
-        imageUrl: "/spotify.png",
+        imageUrl: "/spotify-redesign.png",
         link: "https://spotify-client.vercel.app",
-      },{
+      },
+      {
         description: translations("quizzifyDescription"),
         title: translations("quizzifyTitle"),
         imageUrl: "/quizzify.png",
