@@ -17,7 +17,7 @@
     "contact": "contactar"
   },
   "about": {
-    "description": "Como desarrollador full stack, cuento con más de 5 años de experiencia en la creación de aplicaciones web, haciendo uso de tecnologías como Typescrypt, Nodejs, Golang y React. Mi compromiso con el trabajo en equipo se refleja en una actitud proactiva y la disposición constante de brindar lo mejor de mí, siempre abierto al cambio. Me centro en la creación de código de calidad.<br/><br/>Soy un entusiasta de la tecnología, consciente de que en este dinámico campo siempre hay oportunidades emocionantes para aprender algo nuevo.",
+    "description": "Como desarrollador full stack, cuento con más de 5 años de experiencia en la creación de aplicaciones web, haciendo uso de tecnologías como Typescrypt, Nodejs, Golang, React, Vue y Nextjs. Mi compromiso con el trabajo en equipo se refleja en una actitud proactiva y la disposición constante de brindar lo mejor de mí, siempre abierto al cambio. Me centro en la creación de código de calidad.<br/><br/>Soy un entusiasta de la tecnología, consciente de que en este dinámico campo siempre hay oportunidades emocionantes para aprender algo nuevo.",
     "label": "Las mejores cosas están escritas en la web."
   },
   "education": {
@@ -32,19 +32,22 @@
     "technologistDate": "Junio 2022",
     "technologistTitle": "Tecnologia en diseño de software.",
     "technologistDescription": "2 años, Institución universitaria EAM.",
-    "professionalDate": "Actualmente",
-    "professionalTitle": "Estoy esperando la graduación de ingeniería de software.",
+    "professionalDate": " Junio 2024",
+    "professionalTitle": "Ingeniería de software.",
     "professionalDescription": "6 años, Institución universitaria EAM."
   },
   "experience": {
     "label": "Experiencia",
     "description": "Sumérgete en mi viaje profesional como web developer. Mi trayectoria incluye la creación de soluciones integrales y eficientes, que fusionan la creatividad del diseño con la robustez de la programación. Descubre cómo cada proyecto es un testimonio de mi compromiso con la calidad del software y la innovación.",
     "currently": "Actualmente",
+    "ultraDate": "1 año, 2024 - 2025",
+    "ultraPosition": "UltraDev - Desarrollador Ssr full stack",
+    "ultraDescription": "Desarrollo de software a la medida con tecnologías como React, Vue, Node.js y TypeScript. Lideré la creación de una aplicación de cursos en línea impulsada por inteligencia artificial, refactoricé el código existente aplicando buenas prácticas, rediseñé la interfaz de usuario basándome en un diseño predefinido y desarrollé nuevas funcionalidades desde cero.",
     "zenviaDate": "2 años y 3 meses. 2021 - 2023",
     "zenviaPosition": "Zenvia Conversion - Desarrollador full stack",
     "zenviaDescription": "Desarrollo web Full Stack utilizando tecnologías como React, Node.js, JavaScript y TypeScript. Me enfoqué en el procesamiento casi en tiempo real, webhooks, rebranding e integraciones con aplicaciones externas. Además, actualmente soy responsable de la detección y corrección de bugs, asi como creación de nuevas funcionalidades desde 0.",
     "andikemDate": "6 meses, 2022 - 2023",
-    "andikemPosition": "Andikem - Desarrollador frontend.",
+    "andikemPosition": "Andikem - Desarrollador Ssr frontend.",
     "andikemDescription": "Lideré el desarrollo frontend de una plataforma para gestionar containers a nivel global. Utilicé ReactJs, Bootstrap y Google Maps para crear una interfaz moderna y funcional. Inicialmente, me enfoqué en rediseñar la aplicación, estableciendo una estructura modular y convenciones de desarrollo. Luego, construí cada parte de la aplicación, implementando sus respectivas funcionalidades.",
     "licimaticDate": "1 año y 3 meses, 2020 - 2021",
     "licimaticPosition": "LiciMátic - Desarrollador full stack.",
@@ -58,14 +61,18 @@
     "description": "Adéntrate en mi mundo digital donde la versatilidad se encuentra con la innovación. Cada proyecto en mi portafolio es el resultado de fusionar el frontend y el backend, desde interfaces cautivadoras hasta sistemas robustos, descubre cómo transformo ideas en soluciones completas con un toque inspirador y funcional.",
     "work": "Trabajo",
     "visit": "Visitar",
-    "conversionDescription": "Es una plataforma conversacional que permite la comunicación entre clientes y empresas y posibilita la integración con diversas herramientas.",
+    "wordSearchDescription": "Sumérgete en el desafío de las sopas de letras: compite en tiempo real, invita a tus amigos y desafía a la IA para crear tus propias palabras.",
+    "wordSearchTitle": "MindGrid",
+    "3designDescription": "Explora un mundo de creatividad con la impresión 3D. Imprime tus propias ideas, encuentra una amplia variedad de artículos impresos y accede a repuestos para tus impresoras 3D en la tienda.",
+    "3designTitle": "3Design",
+    "conversionDescription": "Descubre un mundo de creatividad con la impresión 3D, encuentra todo tipos de articulos impresos, repuestos para impresoras 3D e incluso imprime tus propios diseños.",
     "conversionTitle": "Zenvia Conversion",
     "dummyDescription": "Creada con Dummy API y autenticación social. Comparte momentos únicos mediante imágenes, explora etiquetas y disfruta de una experiencia envolvente de interacción visual con tus amigos.",
     "dummyTitle": "Red social dummy",
     "spotyTitle": "SpotyClient",
     "spotyDescription": "Explora la evolución musical con nuestro rediseño de la app, llevando la experiencia de Spotify a otros niveles. Descubre una interfaz inspiradora.",
-    "quizzifyTitle":"Quizzify",
-    "quizzifyDescription":"Desafía tu mente con preguntas divertidas y educativas en una amplia variedad de temas. Compite con amigos, sigue tu progreso y conviértete en un experto mientras te diviertes."
+    "quizzifyTitle": "Quizzify",
+    "quizzifyDescription": "Desafía tu mente con preguntas divertidas y educativas en una amplia variedad de temas. Compite con amigos, sigue tu progreso y conviértete en un experto mientras te diviertes."
   },
   "contact": {
     "email": "Correo",

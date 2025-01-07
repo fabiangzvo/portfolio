@@ -12,7 +12,7 @@ function CardList(props: CardListProps) {
   );
 
   return (
-    <div className="w-full h-full flex justify-center flex-wrap gap-10 text-2xl">
+    <div className="w-full h-full grid grid-cols-3 justify-items-center grid-wrap gap-10 text-2xl max-lg:grid-cols-1">
       {cardItems}
     </div>
   );

@@ -10,11 +10,16 @@ function Portfolio() {
   const items = useMemo(
     () => [
       {
-        description: translations("conversionDescription"),
-        title: translations("conversionTitle"),
-        imageUrl: "/conversion.png",
-        link: "https://web.zenvia.com/zenvia-conversion/login",
-        isWork: true,
+        description: translations("wordSearchDescription"),
+        title: translations("wordSearchTitle"),
+        imageUrl: "/word-puzzle.png",
+        link: "https://word-search-puzzle.vercel.app",
+      },
+      {
+        description: translations("3designDescription"),
+        title: translations("3designTitle"),
+        imageUrl: "/3design.png",
+        link: "https://3-design.netlify.app",
       },
       {
         description: translations("dummyDescription"),
@@ -44,7 +49,7 @@ function Portfolio() {
       label={translations("label")}
       description={translations("description")}
       classes={{
-        container: "max-xl:flex-column",
+        container: "max-xl:flex-column h-full",
         containerTitle:
           "max-2xl:w-full max-xl:flex-column max-xl:items-center max-xl:justify-center xl:mr-10 mb-10",
       }}

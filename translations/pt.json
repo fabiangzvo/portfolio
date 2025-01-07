@@ -17,7 +17,7 @@
     "contact": "contato"
   },
   "about": {
-    "description": "Como desenvolvedor full stack, tenho mais de 5 anos de experiência na criação de aplicativos da Web, usando tecnologias como Typescrypt, Nodejs, Golang e React. Meu compromisso com o trabalho em equipe se reflete em uma atitude proativa e uma disposição constante para dar o melhor de mim, sempre aberto a mudanças. Meu foco é a criação de código de qualidade.<br/><br/>Sou um entusiasta da tecnologia, ciente de que nesse campo dinâmico sempre há oportunidades interessantes para aprender algo novo.",
+    "description": "Como desenvolvedor full stack, tenho mais de 5 anos de experiência na criação de aplicativos da Web, usando tecnologias como Typescrypt, Nodejs, Golang, React, Vue e Nextjs. Meu compromisso com o trabalho em equipe se reflete em uma atitude proativa e uma disposição constante para dar o melhor de mim, sempre aberto a mudanças. Meu foco é a criação de código de qualidade.<br/><br/>Sou um entusiasta da tecnologia, ciente de que nesse campo dinâmico sempre há oportunidades interessantes para aprender algo novo.",
     "label": "As melhores coisas estão escritas na web."
   },
   "education": {
@@ -32,19 +32,22 @@
     "technologistDate": "Junho 2022",
     "technologistTitle": "Tecnologia de design de software.",
     "technologistDescription": "2 anos, Instituição Universidade EAM.",
-    "professionalDate": "Atualmente",
-    "professionalTitle": "Estou aguardando a graduação em engenharia de software.",
+    "professionalDate": "Junho 2024",
+    "professionalTitle": "Engenharia de Software.",
     "professionalDescription": "6 anos, Instituição Universidade EAM."
   },
   "experience": {
     "label": "Experiência",
     "description": "Mergulhe em minha jornada profissional como desenvolvedor da Web. Minha experiência inclui a criação de soluções abrangentes e eficientes que combinam a criatividade do design com a robustez da programação. Descubra como cada projeto é uma prova do meu compromisso com a qualidade e a inovação do software.",
     "currently": "Atualmente",
+    "ultraDate": "1 ano, 2024 - 2025",
+    "ultraPosition": "UltraDev - Desenvolvedor full-stack Ssr",
+    "ultraDescription": "Desenvolvimento de software personalizado utilizando tecnologias como React, Vue, Node.js e TypeScript. Liderei a criação de um aplicativo de cursos online impulsionado por inteligência artificial, refatorei o código existente aplicando boas práticas, redesenhei a interface do usuário com base em um design pré-definido e desenvolvi novas funcionalidades do zero.",
     "zenviaDate": "2 anos e 3 meses. 2021 - 2023",
     "zenviaPosition": "Zenvia Conversion - Desenvolvedor full stack",
     "zenviaDescription": "Desenvolvimento web Full Stack usando tecnologias como React, Node.js, JavaScript e TypeScript. Concentrei-me em o processamento quase em tempo real, webhooks, rebranding e integrações com aplicativos externos. Além disso, atualmente sou responsável por detectar e corrigir bugs, bem como criar novas funcionalidades do zero.",
     "andikemDate": "6 meses, 2022 - 2023",
-    "andikemPosition": "Andikem - Desenvolvedor frontend.",
+    "andikemPosition": "Andikem - Desenvolvedor frontend Ssr.",
     "andikemDescription": "Liderei o desenvolvimento de front-end de uma plataforma para gerenciar contêineres globalmente. Usei ReactJs, Bootstrap e Google Maps para criar uma interface moderna e funcional. Inicialmente, concentrei-me em redesenhar o aplicativo, estabelecendo uma estrutura modular e convenções de desenvolvimento. Em seguida, criei cada parte do aplicativo, implementando suas respectivas funcionalidades.",
     "licimaticDate": "1 ano e 3 meses, 2020 - 2021",
     "licimaticPosition": "LiciMátic - Desenvolvedor full stack.",
@@ -58,14 +61,16 @@
     "description": "Adentre-se no meu mundo digital, onde a versatilidade encontra a inovação. Cada projeto em meu portfólio é o resultado da fusão entre o frontend e o backend, desde interfaces cativantes até sistemas robustos. Descubra como transformo ideias em soluções completas com um toque inspirador e funcional.",
     "work": "Trabalho",
     "visit": "Visitar",
-    "conversionDescription": "É uma plataforma de conversação que permite a comunicação entre clientes e empresas e possibilita a integração com várias ferramentas.",
-    "conversionTitle": "Zenvia Conversion",
+    "wordSearchDescription": "Mergulhe no desafio das sopas de letras: compita em tempo real, convide seus amigos e desafie a IA para criar suas próprias palavras.",
+    "wordSearchTitle": "MindGrid",
+    "3designDescription": "Explore um mundo de criatividade com a impressão 3D. Imprima suas próprias ideias, encontre uma ampla variedade de itens impressos e acesse peças de reposição para suas impressoras 3D na loja.",
+    "3designTitle": "3Design",
     "dummyDescription": "Criada com a Dummy API e autenticação social. Compartilhe momentos únicos por meio de imagens, explore etiquetas e desfrute de uma experiência envolvente de interação visual com seus amigos.",
     "dummyTitle": "Rede social dummy",
     "spotyTitle": "SpotyClient",
     "spotyDescription": "Explore a evolução da música com nosso aplicativo reformulado, levando a experiência do Spotify a novos níveis. Descubra uma interface inspiradora.",
-    "quizzifyTitle":"Quizzify",
-    "quizzifyDescription":" Desafie sua mente com perguntas divertidas e educativas em uma ampla variedade de temas. Compita com amigos, acompanhe seu progresso e torne-se um especialista se divertindo."
+    "quizzifyTitle": "Quizzify",
+    "quizzifyDescription": " Desafie sua mente com perguntas divertidas e educativas em uma ampla variedade de temas. Compita com amigos, acompanhe seu progresso e torne-se um especialista se divertindo."
   },
   "contact": {
     "email": "Email",

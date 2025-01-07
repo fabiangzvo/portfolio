@@ -17,10 +17,16 @@ function Experience() {
         icon: <MdOutlineWork className="text-primary" size="2em" />,
         primaryText: (
           <>
-            {translations("zenviaDate")} &nbsp;
+            {translations("ultraDate")} &nbsp;
             <Badge label={translations("currently")} />
           </>
         ),
+        secondaryText: translations("ultraPosition"),
+        description: translations("ultraDescription"),
+      },
+      {
+        icon: <MdOutlineWork className="text-primary" size="2em" />,
+        primaryText: translations("zenviaDate"),
         secondaryText: translations("zenviaPosition"),
         description: translations("zenviaDescription"),
       },
