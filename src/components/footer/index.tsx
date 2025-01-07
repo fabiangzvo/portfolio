@@ -12,7 +12,7 @@ function Footer() {
           Fabián Guzmán Otavo.
         </Link>
         <p className="max-md:text-2xl pointer-events-none">
-          All rights reserved © 2023
+          All rights reserved © {new Date().getFullYear()}
         </p>
       </div>
       <div>
