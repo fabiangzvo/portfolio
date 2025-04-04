@@ -1,3 +1,5 @@
+import "@theme-toggles/react/css/Classic.css"
+
 import { Albert_Sans } from "next/font/google";
 import { GetStaticPropsContext } from "next";
 import { AnimatePresence } from "framer-motion";

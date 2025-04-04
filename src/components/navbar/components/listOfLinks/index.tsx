@@ -20,7 +20,7 @@ function ListOfLinks(props: ListOfLinksProps) {
   return (
     <div
       className={cs({
-        "flex justify-around order-none w-[25vw] lg:w-[52vw] xl:w-[45vw] max-lg:w-full max-lg:order-3 max-lg:pb-3":
+        "flex justify-around items-center order-none w-[25vw] lg:w-[52vw] xl:w-[45vw] max-lg:w-full max-lg:order-3 max-lg:pb-3":
           true,
         hidden: hide,
       })}

@@ -27,9 +27,9 @@ function LanguageDropdown(props: DropdownProps) {
 
   const { options, label } = useMemo(() => {
     const options = [
-      { label: translation("english"), value: "en" },
-      { label: translation("spanish"), value: "es" },
-      { label: translation("portuguese"), value: "pt" },
+      { label: "EN", value: "en" },
+      { label: "ES", value: "es" },
+      { label: "PT", value: "pt" },
     ];
 
     const label = (
