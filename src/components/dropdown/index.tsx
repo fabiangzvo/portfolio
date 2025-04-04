@@ -39,6 +39,7 @@ function Dropdown(props: DropdownProps) {
         handleClick={onClick}
         options={options}
         isOpen={showOptions}
+        hideOptions={handleShowOptions}
       />
     </>
   );

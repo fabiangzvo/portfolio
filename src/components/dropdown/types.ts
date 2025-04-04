@@ -11,6 +11,7 @@ export type OptionListProps = {
   isOpen: boolean;
   options: Options;
   handleClick: React.MouseEventHandler<HTMLElement>;
+  hideOptions: () => void
 };
 
 export type OptionProps = {
