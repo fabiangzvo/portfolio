@@ -29,9 +29,16 @@ const config: Config = {
             transform: "translateX(-20px)",
           },
         },
+        typing: {
+          from: { width: '0ch' },
+        },
+        blinkCaret: {
+          "50%": { borderColor: 'transparent' },
+        },
       },
       animation: {
         translateToRight: "translateToRight 2s ease-in-out infinite",
+        typewriter: 'typing 4s steps(10), blinkCaret 0.5s infinity step-end alternate',
       },
       fontFamily: {
         albertSans: ["var(--albert-sans)"],

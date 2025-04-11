@@ -30,7 +30,7 @@ function Portfolio() {
       {
         description: translations("spotyDescription"),
         title: translations("spotyTitle"),
-        imageUrl: "/spotify-redesign.png",
+        imageUrl: "/spotify-redesign.PNG",
         link: "https://spotify-client.vercel.app",
       },
       {

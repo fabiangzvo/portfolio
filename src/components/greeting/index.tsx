@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 
 import Dev from "@components/icons/dev";
 import SocialNetwork from "@components/socialNetwork";
+import WordTyping from "@components/wordChanger";
 
 function Greeting() {
   const translation = useTranslations("main");
@@ -17,7 +18,7 @@ function Greeting() {
             Fabián Guzmán Otavo,
           </h1>
           <h2 className="pointer-events-none text-paragraph text-5xl w-full max-lg:text-center">
-            <strong>{translation("developer")}</strong>
+            <section className="flex flex-wrap">{translation("developer")}&nbsp;<WordTyping wordList={['Full Stack', 'Frontend']} /></section>
             <br />
             {translation("description")}
           </h2>
