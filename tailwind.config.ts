@@ -30,15 +30,18 @@ const config: Config = {
           },
         },
         typing: {
-          from: { width: '0ch' },
+          from: { width: "0" },
+          "50%": { width: "8ch" },
+          to: { width: "0" },
         },
-        blinkCaret: {
-          "50%": { borderColor: 'transparent' },
+        blink: {
+          "50%": { borderColor: "transparent" },
         },
       },
       animation: {
         translateToRight: "translateToRight 2s ease-in-out infinite",
-        typewriter: 'typing 4s steps(10), blinkCaret 0.5s infinity step-end alternate',
+        typewriter:
+          "typing 4s steps(10) infinite, blink .5s infinite step-end alternate-reverse",
       },
       fontFamily: {
         albertSans: ["var(--albert-sans)"],
