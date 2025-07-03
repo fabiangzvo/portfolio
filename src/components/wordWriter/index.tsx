@@ -1,35 +1,18 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
-
 interface WordWriterProps {
   wordList: string[]
 }
 
 function WordWriter({ wordList }: WordWriterProps) {
-  const [currWord, setCurrWord] = useState(wordList[0]);
-
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-
-    interval = setInterval(() => {
-      const wordPosition = wordList.findIndex((word) => word === currWord);
-      const nextPosition =
-        wordPosition === wordList.length - 1 ? 0 : wordPosition + 1;
-
-      setCurrWord(wordList[nextPosition]);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  });
-
   return (
-    <p
-      key={currWord}
-      className="overflow-hidden whitespace-nowrap border-r-4 border-primary animate-typewriter w-[8ch]"
+    <div
+      className="h-[38px] overflow-hidden flex flex-col justify-start"
     >
-      {currWord}
-    </p>
+      {wordList.map((word, index) => (
+        <span key={index} className="last:mt-6 &:nth-child(2):mt-5 h-full my-7 first:animate-listVertically inline-block">{word}</span>
+      ))}
+    </div>
   );
 };
 

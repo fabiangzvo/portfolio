@@ -7,7 +7,12 @@
     "portuguese": "Portuguese",
     "viewLess": "Ver menos",
     "viewMore": "Ver más",
-    "developer": "sou desenvolvedor"
+    "iam": "sou",
+    "developer": [
+      "Engenheiro de software",
+      "Desenvolvedor frontend",
+      "Desenvolvedor full stack"
+    ]
   },
   "navbar": {
     "about": "Sobre mim",
