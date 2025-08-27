@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
-import Dev from "@components/icons/dev";
 import SocialNetwork from "@components/socialNetwork";
 import WordTyping from "@components/wordWriter";
 
@@ -24,13 +24,16 @@ function Greeting() {
             {translation("description")}
           </div>
         </div>
-        <div className="flex items-center justify-center max-lg:order-first max-md:py-10 max-sm:mt-32">
-          <Dev />
-        </div>
-      </div>
+        <div className="relative flex items-center justify-center max-lg:order-first max-md:py-10 max-sm:mt-32 h-full max-md:mt-32">
+          <div className="w-[50vw] h-[50vh] bg-cover bg-center bg-primary rounded-3xl max-md:w-[90vw] max-md:h-[40vh]">
+          </div >
+          <Image src="/avatar-bg.png" alt="Dev" fill className="absolute z-20 object-contain [clip-path:circle(50%)] [filter:drop-shadow(0_6px_12px_var(--shadow))]" />
+        </div >
+      </div >
       <SocialNetwork />
-    </section>
+    </section >
   );
 }
+
 
 export default Greeting;

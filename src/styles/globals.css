@@ -13,6 +13,7 @@
   --highlight: #c92929;
   --desktop: gray;
   --text: black;
+  --shadow: #6f2626;
 }
 
 html.dark {
@@ -26,6 +27,7 @@ html.dark {
   --highlight: #ff8906;
   --desktop: #8d99ae;
   --text: white;
+  --shadow: #6a5623;
 }
 
 body {
