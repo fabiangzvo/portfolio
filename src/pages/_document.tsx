@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import { Analytics } from "@vercel/analytics/react";
+import { HeroUIProvider } from "@heroui/react";
 
 export default function Document() {
   return (
@@ -7,7 +8,9 @@ export default function Document() {
       <Head />
       <body className="absolute lg:w-full flex flex-col justify-center items-center">
         <Analytics />
-        <Main />
+        <HeroUIProvider>
+          <Main />
+        </HeroUIProvider>
         <NextScript />
       </body>
     </Html>

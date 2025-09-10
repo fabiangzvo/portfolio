@@ -1,10 +1,13 @@
-import type { Config } from "tailwindcss";
+import {type  Config } from "tailwindcss";
+import colors from "tailwindcss/colors";
+import { heroui } from "@heroui/react";
 
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -62,6 +65,25 @@ const config: Config = {
     },
   },
   darkMode: "class",
-  plugins: [],
+  plugins: [
+    heroui({
+      themes: {
+        light: {
+          colors: {
+            primary: { ...colors.orange, DEFAULT: colors.orange[600] },
+            default: { ...colors.orange, DEFAULT: colors.orange[600] },
+            background: colors.white,
+          },
+        },
+        dark: {
+          colors: {
+            primary: { ...colors.fuchsia, DEFAULT: colors.fuchsia[500] },
+            default: { ...colors.fuchsia, DEFAULT: colors.fuchsia[500] },
+            background: colors.zinc[950],
+          },
+        },
+      },
+    }),
+  ],
 };
 export default config;
