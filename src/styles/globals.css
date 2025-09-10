@@ -101,3 +101,28 @@ body {
   background-color: var(--primary);
   outline: 1px solid slategrey;
 }
+
+/* .box-texture {
+  --mask:
+    radial-gradient(38.99px at 50% calc(100% + 18px),#0000 calc(99% - 8px),#000 calc(101% - 8px) 99%,#0000 101%) calc(50% - 60px) calc(50% - 19px + .5px)/120px 38px ,
+    radial-gradient(38.99px at 50% -18px,#0000 calc(99% - 8px),#000 calc(101% - 8px) 99%,#0000 101%) 50% calc(50% + 19px)/120px 38px ;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+} */
+
+/* .box-texture {
+  aspect-ratio: 1;
+  clip-path: shape(from 84.08% 43.14%,curve to 87.68% 64.55% with 89.11% 52.46%,curve to 76.57% 85.39% with 86.24% 76.65%,curve to 54.85% 89.32% with 66.89% 94.14%,curve to 32.36% 81.54% with 42.80% 84.50%,curve to 14.16% 69.22% with 21.91% 78.57%,curve to 5.11% 46.55% with 6.41% 59.88%,curve to 16.29% 27.68% with 3.81% 33.22%,curve to 37.41% 11.43% with 28.77% 22.14%,curve to 58.05% 6.62% with 46.05% 0.72%,curve to 74.55% 23.17% with 70.04% 12.53%,curve to 84.08% 43.14% with 79.06% 33.81%);
+} */
+
+.box-texture {
+  --s: 140px; /* control the size*/
+  --_g: #0000 52%,var(--background) 54% 57%,#0000 59%; 
+  background: 
+   radial-gradient(farthest-side at -33.33% 50%,var(--_g)) 0 calc(var(--s)/2),
+   radial-gradient(farthest-side at 50% 133.33%,var(--_g)) calc(var(--s)/2) 0,
+   radial-gradient(farthest-side at 133.33% 50%,var(--_g)),
+   radial-gradient(farthest-side at 50% -33.33%,var(--_g)),
+   var(--primary);
+  background-size: calc(var(--s)/4.667) var(--s),var(--s) calc(var(--s)/4.667);
+}

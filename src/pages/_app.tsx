@@ -53,7 +53,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <div className="flex flex-col">
       <Providers>
         <Navbar />
+        <div className="container">
         <Component {...pageProps} />
+        </div>
       </Providers>
       <Footer />
     </div>
