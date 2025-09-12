@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { motion, Variants, Spring } from "framer-motion";
+import { motion, Variants, SpringOptions } from "framer-motion";
 import cs from "classnames";
 
 type ContainerProps = {
@@ -11,8 +11,7 @@ type ContainerProps = {
   classes?: { container?: string; title?: string; containerTitle?: string };
 };
 
-const transition: Spring = {
-  type: "spring",
+const transition: SpringOptions = {
   bounce: 0.4,
   duration: 1,
 };

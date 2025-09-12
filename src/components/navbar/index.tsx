@@ -1,25 +1,28 @@
 import { useState, useCallback, useMemo } from "react";
-import Link from "next/link";
-import { GiHamburgerMenu } from "react-icons/gi";
-import cs from "classnames";
 import { useTranslations } from "next-intl";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenuToggle,
+  Link,
+} from "@heroui/react";
 
 import LanguageDropdown from "@components/languageDropdown";
 import ThemeSwitch from "@components/themeSwitch";
 import { useMediaQuery } from "@hooks/useMediaquery";
+import items from "@shared/menuItems.json";
 
 import ListOfLinks from "./components/listOfLinks";
-import items from "@shared/menuItems.json";
 import { MenuItemProps } from "./types";
 
 type MenuType = Array<MenuItemProps>;
 
-function Navbar() {
+function NavbarComponent() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const isSm = useMediaQuery("(max-width: 1024px)");
   const translations = useTranslations("navbar");
-
-  const handleClick = useCallback(() => setShowMenu(!showMenu), [showMenu]);
 
   const menu = useMemo<MenuType>(
     () =>
@@ -31,39 +34,32 @@ function Navbar() {
   );
 
   return (
-    <nav className="w-full z-[2000] font-albertSans bg-background fixed flex justify-center py-4 text-xl start-0 max-lg:flex-col max-lg:justify-center max-lg:px-5">
-      <div className="w-[90vw] flex justify-between max-lg:w-full max-lg:flex-col">
-        <div className="flex justify-center items-center align-middle gap-4 max-lg:order-1 order-none max-xl:justify-between max-lg:w-full">
+    <Navbar onMenuOpenChange={setShowMenu} classNames={{ wrapper: "max-w-full bg-background" }}>
+      <NavbarContent justify="start">
+        <NavbarBrand>
           <Link
             href="/"
-            className="block transition text-text whitespace-nowrap font-semibold focus:outline-none max-lg:flex max-lg:justify-center"
+            className="block transition text-text whitespace-nowrap font-semibold focus:outline-none max-md:flex max-md:justify-center"
           >
-            <h1 className="max-lg:flex max-xl:justify-start max-lg:w-full underlined cursor-pointer bg-clip-text fill-text-transparent bg-gradient-to-r to-tertiary from-primary max-lg:text-4xl">
+            <h1 className="max-md:flex max-xl:justify-start max-md:w-full underlined cursor-pointer bg-clip-text fill-text-transparent bg-gradient-to-r to-tertiary from-primary">
               Fabián Guzmán Otavo
             </h1>
           </Link>
-          <button
-            onClick={handleClick}
-            className="text-3xl lg:hidden max-lg:flex max-xl:justify-end max-sm:text-5xl"
-          >
-            <GiHamburgerMenu />
-          </button>
-        </div>
-        <ListOfLinks hide={!showMenu && isSm} items={menu} />
-        <div
-          className={cs({
-            "flex gap-6 justify-between max-lg:w-full order-none max-lg:order-5":
-              true,
-            hidden: !showMenu && isSm,
-          })}
-          suppressHydrationWarning
-        >
+        </NavbarBrand>
+      </NavbarContent>
+      <ListOfLinks isMenu={isSm} items={menu} />
+      <NavbarContent justify="end" className="max-lg:hidden">
+        <NavbarItem>
           <LanguageDropdown />
+        </NavbarItem>
+        <NavbarItem>
           <ThemeSwitch />
-        </div>
-      </div>
-    </nav>
-  );
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarMenuToggle
+        aria-label={showMenu ? "Close menu" : "Open menu"}
+        className="lg:hidden"
+      />
+    </Navbar>);
 }
-
-export default Navbar;
+export default NavbarComponent;

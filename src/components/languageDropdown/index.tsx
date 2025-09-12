@@ -1,54 +1,46 @@
-import { useCallback, useMemo } from "react";
+import { useCallback } from "react";
 import { useRouter } from "next/router";
-import { useTranslations } from "next-intl";
+import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button, SharedSelection } from "@heroui/react";
+import { twMerge } from "tailwind-merge";
 
 import Translate from "@components/icons/translate";
 
-import Dropdown from "../dropdown";
+import { languagesAllowed } from "./constants";
 
-type DropdownProps = {
-  options?: Array<{ label: string; value: string }>;
-};
-
-function LanguageDropdown(props: DropdownProps) {
+function LanguageDropdown() {
   const router = useRouter();
-  const translation = useTranslations("main");
 
-  const handelClick = useCallback<React.MouseEventHandler<HTMLElement>>(
-    (event) => {
-      const target = event.target as HTMLElement;
-
-      router.push(router.asPath, router.asPath, {
-        locale: target.getAttribute("data-value") || "es",
-      });
-    },
+  const handelClick = useCallback(
+    (item: SharedSelection) => router.push(router.asPath, router.asPath, {
+      locale: item.currentKey || "es",
+    }),
     [router]
   );
 
-  const { options, label } = useMemo(() => {
-    const options = [
-      { label: "EN", value: "en" },
-      { label: "ES", value: "es" },
-      { label: "PT", value: "pt" },
-    ];
-
-    const label = (
-      <>
-        <Translate /> &emsp;
-        {options.find((language) => language.value === router.locale)?.label}
-      </>
-    );
-
-    return { options, label };
-  }, [translation, router]);
-
   return (
-    <Dropdown
-      id="translate-dropdown"
-      label={label}
-      options={options}
-      handleClick={handelClick}
-    />
+    <Dropdown placement="bottom-start">
+      <DropdownTrigger>
+        <Button
+          variant="bordered"
+          color="default"
+          startContent={<Translate />}
+        >
+          {languagesAllowed.find((language) => language.value === router.locale)?.label}
+        </Button>
+      </DropdownTrigger>
+      <DropdownMenu variant="flat" items={languagesAllowed} selectionMode="single" onSelectionChange={handelClick}>
+        {(item) => (
+          <DropdownItem
+            key={item.value}
+            className={twMerge(item.value === router.locale && "text-primary")}
+            color={item.value === router.locale ? "primary" : "default"}
+          >
+            {item.label}
+          </DropdownItem>
+        )}
+      </DropdownMenu>
+    </Dropdown>
+
   );
 }
 

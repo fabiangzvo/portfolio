@@ -70,15 +70,15 @@ const config: Config = {
       themes: {
         light: {
           colors: {
-            primary: { ...colors.orange, DEFAULT: colors.orange[600] },
-            default: { ...colors.orange, DEFAULT: colors.orange[600] },
+            primary: { ...colors.orange, DEFAULT: "#c92929" },
+            default: { ...colors.orange, DEFAULT: "#c92929" },
             background: colors.white,
           },
         },
         dark: {
           colors: {
-            primary: { ...colors.fuchsia, DEFAULT: colors.fuchsia[500] },
-            default: { ...colors.fuchsia, DEFAULT: colors.fuchsia[500] },
+            primary: { ...colors.fuchsia, DEFAULT: "#ffba08" },
+            default: { ...colors.fuchsia, DEFAULT: "#ffba08" },
             background: colors.zinc[950],
           },
         },

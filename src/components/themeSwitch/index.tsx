@@ -12,12 +12,15 @@ function ThemeSwitch() {
   );
 
   return (
-      <Classic
-        className="flex justify-center items-center scale-[1.8]"
-        toggled={theme === "light"}
-        toggle={handleClick}
-        duration={400}
-      />
+    <Classic
+      className="flex justify-center items-center scale-[1.8]"
+      toggled={theme === "light"}
+      toggle={handleClick}
+      duration={400}
+      placeholder={"Select theme"}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
+    />
   );
 }
 

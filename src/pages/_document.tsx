@@ -6,7 +6,7 @@ export default function Document() {
   return (
     <Html suppressHydrationWarning>
       <Head />
-      <body className="absolute lg:w-full flex flex-col justify-center items-center">
+      <body className="lg:w-full flex flex-col justify-center items-center">
         <Analytics />
         <HeroUIProvider>
           <Main />
