@@ -11,7 +11,7 @@ function SocialNetwork(props: SocialNetworkProps) {
   return (
     <div
       className={cs({
-        "w-40 flex justify-between text-4xl pb-5": true,
+        "w-min flex justify-between text-4xl pb-5 left-0 bottom-0 gap-4": true,
         [containerClass]: !!containerClass,
       })}
     >
@@ -21,15 +21,15 @@ function SocialNetwork(props: SocialNetworkProps) {
         rel="noopener noreferrer"
         aria-label="linkedin"
       >
-        <FaLinkedin className="cursor-pointer text-text" />
+        <FaLinkedin className="cursor-pointer text-text" size={32} />
       </a>
-      <a
+      <a  
         href="https://twitter.com/fabiangzvo"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="twitter"
       >
-        <FaXTwitter className="cursor-pointer text-text" />
+        <FaXTwitter className="cursor-pointer text-text" size={32} />
       </a>
       <a
         href="https://github.com/fabiangzvo"
@@ -37,7 +37,7 @@ function SocialNetwork(props: SocialNetworkProps) {
         rel="noopener noreferrer"
         aria-label="github"
       >
-        <FaGithub className="cursor-pointer text-text" />
+        <FaGithub className="cursor-pointer text-text" size={32} />
       </a>
     </div>
   );

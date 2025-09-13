@@ -7,7 +7,7 @@ import WordTyping from "@components/wordWriter";
 function Greeting() {
   const translation = useTranslations("main");
   return (
-    <section className="w-full min-h-screen flex flex-col text-sm lg:flex">
+    <section className="w-full min-h-screen flex flex-col text-sm lg:flex relative">
       <div className="w-full h-full items-center justify-center text-sm flex font-albertSans max-lg:flex-col max-lg:mb-[9em] max-sm:mb-[15em]">
         <div className="flex flex-col w-full items-start justify-center max-lg:order-last">
           <h2 className="pointer-events-none text-paragraph text-2xl w-full max-lg:text-center">
