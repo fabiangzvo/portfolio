@@ -27,7 +27,7 @@ function CardComponent(props: CardProps) {
           {title}&nbsp;
           {isWork && <Badge label={translations("work")} />}
         </h2>
-        <Tooltip color="default" content={<p className="w-[25vw]">{description}</p>}>
+        <Tooltip color="default" content={<p className="w-[25vw] max-sm:w-[50vw]">{description}</p>}>
           <p className="text-base text-paragraph line-clamp-3">
             {description}
           </p>
