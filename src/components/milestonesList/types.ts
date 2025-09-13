@@ -2,7 +2,7 @@ export type MilestoneItemProps = {
   icon: React.ReactNode;
   description: string;
   primaryText: string | React.ReactNode;
-  secondaryText: string;
+  secondaryText: string | React.ReactNode;
   disableViewMore?: boolean;
 };
 

@@ -81,6 +81,7 @@ function Contact() {
         containerTitle:
           "max-2xl:w-full max-xl:flex-column max-xl:items-center max-xl:justify-center xl:mr-10 mb-10",
       }}
+      rightTitle
     >
       <Form handleClick={handleClick} />
       {toast && (

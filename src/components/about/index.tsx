@@ -9,7 +9,6 @@ function About() {
     <Container
       id="about"
       label={translations("label")}
-      rightTitle
       classes={{
         container: "max-xl:flex-column",
         containerTitle:
@@ -17,7 +16,7 @@ function About() {
       }}
     >
       <span
-        className="w-full text-2xl max-md:text-4xl"
+        className="w-full text-base"
         dangerouslySetInnerHTML={{ __html: translations("description") }}
       />
     </Container>

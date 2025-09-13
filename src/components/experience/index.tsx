@@ -15,13 +15,9 @@ function Experience() {
     () => [
       {
         icon: <MdOutlineWork className="text-primary" size="2em" />,
-        primaryText: (
-          <>
-            {translations("ultraDate")} &nbsp;
-            <Badge label={translations("currently")} />
-          </>
-        ),
-        secondaryText: translations("ultraPosition"),
+        primaryText: translations("ultraDate"),
+        secondaryText: <>{translations("ultraPosition")} &nbsp;
+          <Badge label={translations("currently")} /></>,
         description: translations("ultraDescription"),
       },
       {
