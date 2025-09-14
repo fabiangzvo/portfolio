@@ -7,11 +7,11 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<any>) => {
     const { method, body } = req;
     switch (method) {
       case "POST":
-        const { email, name, data } = JSON.parse(body);
+        const { email, subject, data } = JSON.parse(body);
 
         const content = {
           to: process.env.PERSONAL_EMAIL || "",
-          data: `${name} - ${email} - ${data}`,
+          data: `${subject} - ${email} - ${data}`,
         };
 
         const { rejected } = await sendMail(content);
@@ -31,6 +31,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<any>) => {
         return;
     }
   } catch (err) {
+    console.log(err);
     res.status(400).json({ status: "error sending email" });
   }
 };

@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Card } from "@heroui/react";
 
 import Input from "@components/input";
 import Button from "@components/button";
@@ -12,43 +13,45 @@ function Form(props: FormProps) {
   const translations = useTranslations("contact");
 
   return (
-    <form
-      className="flex flex-col w-full bg-background border border-stroke rounded-xl px-[6em] py-[6em] shadow-lg shadow-stroke max-md:px-[3em]"
-      onSubmit={handleClick}
-    >
-      <h1 className="pointer-events-none text-paragraph w-full text-center text-3xl font-extrabold mb-10 max-md:text-5xl">
-        {translations("label")}
-      </h1>
-      <Input
-        name="contactName"
-        label={translations("name")}
-        type="text"
-        placeholder="Fabián Guzmán O."
-        required
-      />
-      <Input
-        name="email"
-        label={translations("email")}
-        type="email"
-        placeholder="example@example.com"
-        required
-      />
-      <div className="mb-10">
-        <label
-          htmlFor="message"
-          className="block mb-2 text-xl text-text max-md:text-4xl"
-        >
-          {translations("message")}
-        </label>
-        <textarea
-          id="message"
-          className="bg-stroke text-lg rounded-lg block w-full p-2.5 max-md:text-4xl"
-          placeholder={translations("messagePlaceholder")}
+    <Card>
+      <form
+        className="flex flex-col w-full bg-background rounded-xl px-24 pt-12 pb-16 max-md:px-[3em] text-base bg-background/20"
+        onSubmit={handleClick}
+      >
+        <h1 className="pointer-events-none text-paragraph w-full text-center text-xl font-extrabold mb-10">
+          {translations("label")}
+        </h1>
+        <Input
+          name="subject"
+          label={translations("subject")}
+          type="text"
+          placeholder="Subject"
           required
         />
-      </div>
-      <Button label={translations("send")} />
-    </form>
+        <Input
+          name="email"
+          label={translations("email")}
+          type="email"
+          placeholder="example@example.com"
+          required
+        />
+        <div className="mb-10">
+          <label
+            htmlFor="message"
+            className="block mb-2 text-base text-text"
+          >
+            {translations("message")}
+          </label>
+          <textarea
+            id="message"
+            className="bg-stroke text-base rounded-lg block w-full p-2.5"
+            placeholder={translations("messagePlaceholder")}
+            required
+          />
+        </div>
+        <Button type="submit" label={translations("send")} />
+      </form>
+    </Card>
   );
 }
 

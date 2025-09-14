@@ -87,6 +87,7 @@
     "contact": "Let's talk",
     "description": "As a web developer, I offer strong technical skills and a creative approach to drive innovation.I am excited to collaborate on challenging projects.<br /><br />Together we can build impactful solutions that transcend expectations!",
     "mailFailed": "Ops! Seu e-mail não chegou, mas não se preocupe, estou disponível em minhas redes.",
-    "mailSent": "Mail sent successfully! I will be contacting you soon."
+    "mailSent": "Mail sent successfully! I will be contacting you soon.",
+    "subject": "Subject"
   }
 }

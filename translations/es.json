@@ -89,6 +89,7 @@
     "contact": "Hablemos",
     "description": "Como web developer, ofrezco habilidades técnicas sólidas y un enfoque creativo para impulsar la innovación.Estoy entusiasmado por colaborar en proyectos desafiantes.<br /><br />¡Juntos podemos construir soluciones impactantes que trasciendan las expectativas!",
     "mailFailed": "¡Ups! Tu correo no llegó, pero no te preocupes, estoy disponible en mis redes.",
-    "mailSent": "¡Correo enviado con éxito! pronto me estaré comunicando contigo."
+    "mailSent": "¡Correo enviado con éxito! pronto me estaré comunicando contigo.",
+    "subject": "Asunto"
   }
 }

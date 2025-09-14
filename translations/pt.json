@@ -87,6 +87,7 @@
     "contact": "Vamos conversar",
     "description": "Como desenvolvedor Web, ofereço habilidades técnicas sólidas e uma abordagem criativa para impulsionar a inovação e estou animado para colaborar em projetos desafiadores.<br /><br />Juntos, podemos criar soluções impactantes que transcendem as expectativas!",
     "mailFailed": "¡Ups! Tu correo no se envió, pero no te preocupes, estoy disponible en mis redes.",
-    "mailSent": "Correo enviado com sucesso! Logo estarei me comunicando com você."
+    "mailSent": "Correo enviado com sucesso! Logo estarei me comunicando com você.",
+    "subject": "Assunto"
   }
 }

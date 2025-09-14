@@ -30,7 +30,7 @@ function Contact() {
 
       const data = {
         email: e.currentTarget.email.value,
-        name: e.currentTarget.contactName.value,
+        subject: e.currentTarget.subject.value,
         data: e.currentTarget.message.value,
       };
 
@@ -55,16 +55,7 @@ function Contact() {
       );
 
       setToast({
-        content: (
-          <>
-            {translations("mailFailed")}&nbsp;
-            <ScrollButton
-              callback={onclose}
-              scrollTo={isBottom ? "up" : "down"}
-              label={icon}
-            />
-          </>
-        ),
+        content: translations("mailFailed"),
         icon: <MdOutlineError className="text-red-800 text-5xl" />,
       });
     },
