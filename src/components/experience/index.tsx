@@ -12,12 +12,17 @@ function Experience() {
   const translations = useTranslations("experience");
 
   const items = useMemo<MilestoneList>(
-    () => [
+    () => [{
+      icon: <MdOutlineWork className="text-primary" size="2em" />,
+        primaryText: translations("redCapDate"),
+        secondaryText: <>{translations("redCapPosition")} &nbsp;
+          <Badge label={translations("currently")} /></>,
+        description: translations("redCapDescription"),
+    },
       {
         icon: <MdOutlineWork className="text-primary" size="2em" />,
         primaryText: translations("ultraDate"),
-        secondaryText: <>{translations("ultraPosition")} &nbsp;
-          <Badge label={translations("currently")} /></>,
+        secondaryText: translations("ultraPosition"),
         description: translations("ultraDescription"),
       },
       {

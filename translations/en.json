@@ -59,7 +59,10 @@
     "licimaticDescription": "Full Stack web development using technologies such as React, Pub/Sub, Node.js, JavaScript and Golang. I focused on refactoring the spaghetti code of several apps and creating new backend/frontend functionalities such as endpoint creation, Cron jobs and scrapping with near real time strategies and UI building. Finally I was focused on the complete UI redesign of the app.",
     "swatitDate": "10 months, 2019 - 2020",
     "swatitPosition": "Swat-it - junior web developer.",
-    "swatitDescription": "Web development using technologies such as PHP, Angular, Wordpress, Jquery, TypeRocket. I focused on creating new functionalities such as UI creation and corrections, endpoint creation and recovery of almost lost projects."
+    "swatitDescription": "Web development using technologies such as PHP, Angular, Wordpress, Jquery, TypeRocket. I focused on creating new functionalities such as UI creation and corrections, endpoint creation and recovery of almost lost projects.",
+    "redCapDate": "August - 2025",
+    "redCapPosition": "RedCap - Ssr Full Stack Developer",
+    "redCapDescription": "Custom software development using technologies such as React, Next.js, NestJS, and TypeScript. Integration of external services for casino bonus creation."
   },
   "portfolio": {
     "label": "portfolio",
