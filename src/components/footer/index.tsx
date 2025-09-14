@@ -3,19 +3,19 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className="w-[90vw] flex justify-between items-between pb-5 max-lg:w-[95%]">
+    <footer className="w-[90vw] flex justify-between items-between pb-5 max-lg:w-[95%] max-sm:flex-col max-sm:items-center">
       <div className="flex flex-col max-md:ml-6">
         <Link
           href="/"
-          className="font-extrabold text-2xl max-md:text-4xl cursor-pointer"
+          className="font-extrabold text-lg cursor-pointer"
         >
           Fabián Guzmán Otavo.
         </Link>
-        <p className="max-md:text-2xl pointer-events-none">
+        <p className="text-base pointer-events-none">
           All rights reserved © {new Date().getFullYear()}
         </p>
       </div>
-      <div>
+      <div className="max-sm:order-first max-sm:mb-2">
         <SocialNetwork />
       </div>
     </footer>

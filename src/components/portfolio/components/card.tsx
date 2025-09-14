@@ -12,7 +12,7 @@ function CardComponent(props: CardProps) {
   const translations = useTranslations("portfolio");
 
   return (
-    <Card className="max-w-[400px] min-w-[300px]">
+    <Card className="max-w-[400px] min-w-[300px] bg-background/20">
       <CardHeader className="p-0 relative h-[25vh]">
         <Image
           className="rounded-t-lg max-md:w-full inset-0 object-cover"

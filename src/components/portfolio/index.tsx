@@ -49,7 +49,7 @@ function Portfolio() {
       label={translations("label")}
       description={translations("description")}
       classes={{
-        container: "max-xl:flex-column h-full",
+        container: "flex-col h-full 2xl:items-start",
         containerTitle:
           "max-2xl:w-full max-xl:flex-column max-xl:items-center max-xl:justify-center xl:mr-10 mb-10",
       }}

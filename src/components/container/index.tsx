@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { motion, Variants, SpringOptions } from "framer-motion";
 import cs from "classnames";
+import { twMerge } from "tailwind-merge";
 
 type ContainerProps = {
   children: React.ReactNode;
@@ -80,11 +81,10 @@ function Container(props: ContainerProps) {
       variants={contentVariants}
       key={id}
       id={id}
-      className={cs({
-        "w-full min-h-[100vh] h-full flex justify-center font-albertSans text-xl 2xl:items-center max-2xl:flex-col":
-          true,
-        [container]: !!container,
-      })}
+      className={twMerge(
+        "w-full min-h-[100vh] h-full flex justify-center font-albertSans text-xl 2xl:items-center max-2xl:flex-col",
+        container,
+      )}
     >
       {leftContent}
       {rightContent}

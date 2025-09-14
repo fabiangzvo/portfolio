@@ -1,3 +1,5 @@
+import { PressEvent, ButtonProps as ButtonPropsHeroui } from "@heroui/react";
+
 export type ButtonProps = Partial<
-  React.InputHTMLAttributes<HTMLButtonElement> & { label: string }
+  ButtonPropsHeroui & { label: string, onClick: (values: PressEvent) => void }
 >;

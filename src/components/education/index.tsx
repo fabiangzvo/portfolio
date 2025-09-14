@@ -13,7 +13,7 @@ function Education() {
   const items = useMemo(
     () => [
       {
-        icon: <FaClock className="text-primary" size="1.5em" />,
+        icon: <GiGraduateCap className="text-primary" size="2em" />,
         primaryText: translations("professionalDate"),
         secondaryText: translations("professionalTitle"),
         description: translations("professionalDescription"),
