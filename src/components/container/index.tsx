@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, ReactNode } from "react";
 import { motion, Variants, SpringOptions } from "framer-motion";
 import cs from "classnames";
 import { twMerge } from "tailwind-merge";
@@ -6,7 +6,7 @@ import { twMerge } from "tailwind-merge";
 type ContainerProps = {
   children: React.ReactNode;
   id: string;
-  label: string;
+  label: string| ReactNode;
   description?: undefined | TrustedHTML;
   rightTitle?: boolean;
   classes?: { container?: string; title?: string; containerTitle?: string };
