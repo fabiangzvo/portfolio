@@ -6,6 +6,7 @@ import { IoShieldCheckmark } from "react-icons/io5";
 import { MdOutlineError } from "react-icons/md";
 import { FaArrowDown } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa";
+import Image from "next/image";
 
 import Toast from "@components/toast";
 import Container from "../container";
@@ -65,7 +66,12 @@ function Contact() {
   return (
     <Container
       id="contact"
-      label={translations("contact")}
+      label={<span className="w-full flex flex-col items-center">
+        <span className="relative w-full flex justify-center">
+          <Image src="/avatar-shout-cut.png" alt="programmer" width={250} height={250} className="[clip-path:circle(70%)] [filter:drop-shadow(0_1px_12px_var(--shadow))]" />
+        </span>
+        {translations("contact")}
+      </span>}
       description={translations.raw("description")}
       classes={{
         container: "max-xl:flex-column",

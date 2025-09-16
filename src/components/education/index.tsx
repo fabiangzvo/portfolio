@@ -3,6 +3,7 @@ import { GiGraduateCap } from "react-icons/gi";
 import { FaStar } from "react-icons/fa6";
 import { FaClock } from "react-icons/fa";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 import Container from "../container";
 import MilestonesList from "../milestonesList";
@@ -43,7 +44,12 @@ function Education() {
   return (
     <Container
       id="education"
-      label={translations("label")}
+      label={<span className="w-full flex flex-col items-center">
+        <span className="relative w-full flex justify-center">
+          <Image src="/avatar-read.png" alt="programmer" width={250} height={250} className="[clip-path:circle(70%)] [filter:drop-shadow(0_6px_12px_var(--shadow))]" />
+        </span>
+        {translations("label")}
+      </span>}
       description={translations("description")}
       classes={{
         container: "max-xl:flex-column",

@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 import Container from "../container";
-import Image from "next/image";
 
 function About() {
   const translations = useTranslations("about");
@@ -9,12 +9,12 @@ function About() {
   return (
     <Container
       id="about"
-      label={<span className="w-full">
-        <span className="relative w-full flex justify-center">
-          <Image src="/user-programming.png" alt="programmer" width={250} height={250} className="[clip-path:circle(70%)] [filter:drop-shadow(0_6px_12px_var(--shadow))]" />
+      label={<span className="w-full text-center flex flex-col justify-center">
+        <span className="relative w-full flex justify-center inset-y-1">
+          <Image src="/avatar.png" alt="programmer" width={250} height={250} className="[clip-path:circle(70%)] [filter:drop-shadow(0_1px_12px_var(--shadow))]" />
         </span>
         {translations("label")}
-        </span>}
+      </span>}
       classes={{
         container: "max-xl:flex-column",
         containerTitle:
