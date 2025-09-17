@@ -1,55 +1,62 @@
-import Image from "next/image";
-import cs from "classnames";
+import { useMemo } from "react";
 import { useTranslations } from "next-intl";
-import { Button, Card, CardBody, CardFooter, CardHeader, Tooltip } from "@heroui/react";
+import { Card, CardFooter, Image, useDisclosure, ModalBody, ModalContent, Modal, ModalFooter } from "@heroui/react";
 
-import Badge from "@components/badge";
+import Button from "@components/button";
 
 import { CardProps } from "../types";
+import { STACK_LIST } from "../constants";
 
 function CardComponent(props: CardProps) {
-  const { title, description, link, imageUrl, isWork } = props;
+  const { title, description, imageUrl, stackList, link } = props;
   const translations = useTranslations("portfolio");
 
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
+  const stack = useMemo(() => stackList.map((tech: string) => {
+    const Icon = STACK_LIST[tech as keyof typeof STACK_LIST];
+
+    return (
+      <div key={tech} className="bg-primary rounded-full p-1">
+        <Icon size={30} />
+      </div>);
+  }), [stackList]);
+
   return (
-    <Card className="max-w-[400px] min-w-[300px] bg-background/20">
-      <CardHeader className="p-0 relative h-[25vh]">
+    <>
+      <Card className="max-w-[400px] min-w-[300px] bg-background/20" isFooterBlurred isPressable shadow="sm" onPress={onOpen}>
         <Image
-          className="rounded-t-lg max-md:w-full inset-0 object-cover"
+          isZoomed
+          removeWrapper
+          className="rounded-t-lg max-md:w-full inset-0 object-cover h-56"
           src={imageUrl}
           alt={title}
-          objectPosition="50% 20%"
-          fill
+          style={{ objectPosition: "50% 20%" }}
         />
-      </CardHeader>
-      <CardBody>
-        <h2 className="mb-2 text-xl font-bold tracking-tight text-text">
-          {title}&nbsp;
-          {isWork && <Badge label={translations("work")} />}
-        </h2>
-        <Tooltip color="default" content={<p className="w-[25vw] max-sm:w-[50vw]">{description}</p>}>
-          <p className="text-base text-paragraph line-clamp-3">
-            {description}
-          </p>
-        </Tooltip>
-      </CardBody>
-      <CardFooter className={cs({
-        "opacity-0 pointer-events-none": !link,
-      })}
-      >
-        {link && (
-          <Button className="relative w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-xl font-medium text-text rounded-lg group bg-gradient-to-br from-secondary to-primary group-hover:from-primary group-hover:to-secondary focus:ring-4 focus:outline-none focus:ring-primary">
-            <a
-              className="relative text-text w-full px-5 py-1 transition-all ease-in duration-75 bg-background rounded-md group-hover:bg-transparent group-hover:text-buttonText"
-              target="_blank"
-              href={link}
-            >
-              {translations("visit")}
-            </a>
-          </Button>
-        )}
-      </CardFooter>
-    </Card>
+        <CardFooter className="absolute dark:bg-slate-800/50 bottom-0 z-10 justify-center bg-gray-300/50">
+          <span className="font-semibold">{title}</span>
+        </CardFooter>
+      </Card>
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} backdrop="blur" size="4xl">
+        <ModalContent className="min-h-[50vh]">
+          <Image
+            removeWrapper
+            className="object-cover -z-20 rounded-b-none border-b-1"
+            src={imageUrl}
+            alt={title}
+            style={{ objectPosition: "50% 20%" }}
+          />
+          <ModalBody className="flex flex-col gap-4">
+            <h1 className="text-xl font-semibold my-2">{title}</h1>
+            <p className="text-base">{description}</p>
+          </ModalBody>
+          <ModalFooter className="flex justify-between gap-10 items-center">
+            <p className="flex gap-2 text-background">{stack}</p>
+            <Button onClick={() => window.open(link, "_blank")} label={translations("visit")} />
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
   );
 }
 

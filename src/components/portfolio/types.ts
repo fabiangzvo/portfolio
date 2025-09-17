@@ -4,6 +4,7 @@ export type CardProps = {
   link?: string;
   imageUrl: string;
   isWork?: boolean;
+  stackList: Array<string>;
 };
 
 export type CardListProps = {
