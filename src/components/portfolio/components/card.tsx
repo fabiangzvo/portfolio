@@ -1,15 +1,12 @@
 import { useMemo } from "react";
-import { useTranslations } from "next-intl";
-import { Card, CardFooter, Image, useDisclosure, ModalBody, ModalContent, Modal, ModalFooter } from "@heroui/react";
-
-import Button from "@components/button";
+import { Card, CardFooter, Image, useDisclosure, Tooltip } from "@heroui/react";
 
 import { CardProps } from "../types";
 import { STACK_LIST } from "../constants";
+import DetailModal from "./detailModal";
 
 function CardComponent(props: CardProps) {
   const { title, description, imageUrl, stackList, link } = props;
-  const translations = useTranslations("portfolio");
 
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -17,14 +14,17 @@ function CardComponent(props: CardProps) {
     const Icon = STACK_LIST[tech as keyof typeof STACK_LIST];
 
     return (
-      <div key={tech} className="bg-primary rounded-full p-1">
-        <Icon size={30} />
-      </div>);
+      <Tooltip key={tech} content={tech}>
+        <div className="bg-primary rounded-full p-1">
+          <Icon size={30} />
+        </div>
+      </Tooltip>
+    );
   }), [stackList]);
 
   return (
     <>
-      <Card className="max-w-[400px] min-w-[300px] bg-background/20" isFooterBlurred isPressable shadow="sm" onPress={onOpen}>
+      <Card className="max-w-[400px] min-w-[300px] bg-background/20" isFooterBlurred isPressable shadow="lg" onPress={onOpen}>
         <Image
           isZoomed
           removeWrapper
@@ -37,25 +37,7 @@ function CardComponent(props: CardProps) {
           <span className="font-semibold">{title}</span>
         </CardFooter>
       </Card>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange} backdrop="blur" size="4xl">
-        <ModalContent className="min-h-[50vh]">
-          <Image
-            removeWrapper
-            className="object-cover -z-20 rounded-b-none border-b-1"
-            src={imageUrl}
-            alt={title}
-            style={{ objectPosition: "50% 20%" }}
-          />
-          <ModalBody className="flex flex-col gap-4">
-            <h1 className="text-xl font-semibold my-2">{title}</h1>
-            <p className="text-base">{description}</p>
-          </ModalBody>
-          <ModalFooter className="flex justify-between gap-10 items-center">
-            <p className="flex gap-2 text-background">{stack}</p>
-            <Button onClick={() => window.open(link, "_blank")} label={translations("visit")} />
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+      <DetailModal isOpen={isOpen} onOpenChange={onOpenChange} imageUrl={imageUrl} title={title} description={description} stackList={stack} link={link} />
     </>
   );
 }

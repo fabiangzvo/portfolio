@@ -20,7 +20,7 @@ function OptionList(props: OptionListProps) {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [hideOptions]);
+  }, [hideOptions, isOpen]);
 
   const optionList = useMemo(
     () =>

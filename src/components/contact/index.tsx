@@ -60,7 +60,7 @@ function Contact() {
         icon: <MdOutlineError className="text-red-800 text-5xl" />,
       });
     },
-    [onclose, translations]
+    [translations]
   );
 
   return (

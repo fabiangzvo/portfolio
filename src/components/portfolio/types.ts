@@ -10,3 +10,13 @@ export type CardProps = {
 export type CardListProps = {
   items: Array<CardProps>;
 };
+
+export type DetailModalProps = {
+  isOpen: boolean;
+  onOpenChange: (isOpen: boolean) => void;
+  imageUrl: string;
+  title: string;
+  description: string;
+  stackList: Array<React.ReactNode>;
+  link?: string;
+};
