@@ -10,8 +10,9 @@ function About() {
     <Container
       id="about"
       label={<span className="w-full text-center flex flex-col justify-center">
-        <span className="relative w-full flex justify-center inset-y-1">
-          <Image src="/avatar.png" alt="programmer" width={250} height={250} className="[clip-path:circle(70%)] [filter:drop-shadow(0_1px_12px_var(--shadow))]" />
+        <span className=" h-[60vh] w-full flex justify-center items-center max-sm:scale-85 blob">
+          <span className="blob blob-6 bg-primary h-[60vh]" />
+          <Image src="/avatar.png" alt="programmer" width={250} height={250} className="[clip-path:circle(70%)] [filter:drop-shadow(0_1px_12px_var(--shadow))] absolute z-30 max-sm:bottom-24" />
         </span>
         {translations("label")}
       </span>}

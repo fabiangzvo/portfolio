@@ -67,8 +67,9 @@ function Contact() {
     <Container
       id="contact"
       label={<span className="w-full flex flex-col items-center">
-        <span className="relative w-full flex justify-center">
-          <Image src="/avatar-shout-cut.png" alt="programmer" width={250} height={250} className="[clip-path:circle(70%)] [filter:drop-shadow(0_1px_12px_var(--shadow))]" />
+        <span className="relative w-full flex justify-center max-lg:mt-20 blob-2">
+          <span className="blob-2 bg-primary h-[60vh]" />
+          <Image src="/avatar-shout-cut.png" alt="programmer" width={250} height={250} className="[clip-path:circle(70%)] [filter:drop-shadow(0_1px_12px_var(--shadow))] absolute inset-y-20 max-sm:inset-y-36" />
         </span>
         {translations("contact")}
       </span>}
