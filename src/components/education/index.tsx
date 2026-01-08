@@ -45,8 +45,11 @@ function Education() {
     <Container
       id="education"
       label={<span className="w-full flex flex-col items-center">
-        <span className="relative w-full flex justify-center">
-          <Image src="/avatar-read.png" alt="programmer" width={250} height={250} className="[clip-path:circle(70%)] [filter:drop-shadow(0_6px_12px_var(--shadow))]" />
+        <span className="relative h-[60vh] w-full flex justify-center items-end max-sm:scale-85">
+          <span className="shape-3 texture-1 bg-primary h-[60vh]" />
+          <div className="w-full h-3/5 absolute bottom-40 max-md:h-2/4">
+            <Image src="/avatar-read.png" alt="programmer" fill className="[clip-path:circle(70%)] [filter:drop-shadow(0_6px_12px_var(--shadow))] z-30 object-contain" />
+          </div>
         </span>
         {translations("label")}
       </span>}

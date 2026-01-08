@@ -58,8 +58,11 @@ function Experience() {
     <Container
       id="experience"
       label={<span className="w-full flex flex-col items-center">
-        <span className="relative w-full flex justify-center">
-          <Image src="/user-programming.png" alt="programmer" width={250} height={250} className="[clip-path:circle(70%)] [filter:drop-shadow(0_6px_12px_var(--shadow))]" />
+        <span className="relative h-[60vh] w-full flex justify-center items-end max-sm:scale-85 mb-10">
+          <span className="shape-1 box-texture bg-primary h-[50vh]" />
+          <div className="w-full h-3/5 absolute bottom-0 max-md:h-2/4 max-md:bottom-6">
+            <Image src="/user-programming.png" alt="programmer" fill className="[clip-path:circle(70%)] [filter:drop-shadow(0_6px_12px_var(--shadow))] z-30 object-contain" />
+          </div>
         </span>
         {translations("label")}
       </span>}

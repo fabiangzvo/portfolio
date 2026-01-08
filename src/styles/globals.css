@@ -117,73 +117,160 @@ body {
 
 .box-texture {
   --s: 140px; /* control the size*/
-  --_g: #0000 52%,var(--background) 54% 57%,#0000 59%; 
-  background: 
-   radial-gradient(farthest-side at -33.33% 50%,var(--_g)) 0 calc(var(--s)/2),
-   radial-gradient(farthest-side at 50% 133.33%,var(--_g)) calc(var(--s)/2) 0,
-   radial-gradient(farthest-side at 133.33% 50%,var(--_g)),
-   radial-gradient(farthest-side at 50% -33.33%,var(--_g)),
-   var(--primary);
-  background-size: calc(var(--s)/4.667) var(--s),var(--s) calc(var(--s)/4.667);
+  --_g: #0000 52%, var(--background) 54% 57%, #0000 59%;
+  background: radial-gradient(farthest-side at -33.33% 50%, var(--_g)) 0
+      calc(var(--s) / 2),
+    radial-gradient(farthest-side at 50% 133.33%, var(--_g)) calc(var(--s) / 2)
+      0,
+    radial-gradient(farthest-side at 133.33% 50%, var(--_g)),
+    radial-gradient(farthest-side at 50% -33.33%, var(--_g)), var(--primary);
+  background-size: calc(var(--s) / 4.667) var(--s),
+    var(--s) calc(var(--s) / 4.667);
 }
-.blob {
+.shape-5 {
   aspect-ratio: 1;
-  clip-path: shape(from 77.48% 34.65%,curve to 80.39% 69.00% with 80.48% 50.00%,curve to 61.97% 82.92% with 80.30% 87.99%,curve to 30.00% 72.02% with 43.64% 77.84%,curve to 17.14% 50.37% with 16.36% 66.20%,curve to 28.42% 18.02% with 17.91% 34.55%,curve to 56.71% 10.39% with 38.93% 1.49%,curve to 77.48% 34.65% with 74.49% 19.29%);
+  clip-path: shape(
+    from 77.48% 34.65%,
+    curve to 80.39% 69% with 80.48% 50%,
+    curve to 61.97% 82.92% with 80.3% 87.99%,
+    curve to 30% 72.02% with 43.64% 77.84%,
+    curve to 17.14% 50.37% with 16.36% 66.2%,
+    curve to 28.42% 18.02% with 17.91% 34.55%,
+    curve to 56.71% 10.39% with 38.93% 1.49%,
+    curve to 77.48% 34.65% with 74.49% 19.29%
+  );
 }
 
-.blob-5 {
+.texture-3 {
   --s: 160px;
-    
-  --_c:5%,#0000 75%,var(--background) 0;
-  --_g:/var(--s) var(--s) conic-gradient(at var(--_c));
-  --_l:/var(--s) var(--s) conic-gradient(at 50% var(--_c));
-  background:
-    0 calc(7*var(--s)/10) var(--_l),
-    calc(var(--s)/2) calc(var(--s)/5) var(--_l),
-    calc(var(--s)/5) 0 var(--_g),
-    calc(7*var(--s)/10) calc(var(--s)/2) var(--_g),
-    conic-gradient(at 90% 90%,var(--background) 75%,var(--primary) 0)
-    0 0/calc(var(--s)/2) calc(var(--s)/2);
+  --_c: 5%, #0000 75%, var(--background) 0;
+  --_g: /var(--s) var(--s) conic-gradient(at var(--_c));
+  --_l: /var(--s) var(--s) conic-gradient(at 50% var(--_c));
+  background: 0 calc(7 * var(--s) / 10) var(--_l),
+    calc(var(--s) / 2) calc(var(--s) / 5) var(--_l),
+    calc(var(--s) / 5) 0 var(--_g),
+    calc(7 * var(--s) / 10) calc(var(--s) / 2) var(--_g),
+    conic-gradient(at 90% 90%, var(--background) 75%, var(--primary) 0) 0 0 /
+      calc(var(--s) / 2) calc(var(--s) / 2);
 }
 
-.blob-3 {
+.texture-2 {
   --s: 65px;
-  --l1:#0000  48%,var(--background) 0 52%,#0000 0;
-  --l2:#0000 1.3%,var(--primary) 0 32%,#0000 0;
-  background:
-    linear-gradient(-45deg,var(--l2)),
-    linear-gradient( 45deg,var(--l1)),
-    linear-gradient( 45deg,var(--l2)) calc(var(--s)/2) calc(var(--s)/2),
-    linear-gradient(-45deg,var(--l1)) var(--primary);
-  background-size: calc(2*var(--s)) var(--s),var(--s) var(--s);
+  --l1: #0000 48%, var(--background) 0 52%, #0000 0;
+  --l2: #0000 1.3%, var(--primary) 0 32%, #0000 0;
+  background: linear-gradient(-45deg, var(--l2)),
+    linear-gradient(45deg, var(--l1)),
+    linear-gradient(45deg, var(--l2)) calc(var(--s) / 2) calc(var(--s) / 2),
+    linear-gradient(-45deg, var(--l1)) var(--primary);
+  background-size: calc(2 * var(--s)) var(--s), var(--s) var(--s);
 }
 
 .blob-4 {
   --s: 100px;
-  --c:#0000 48%,var(--background) 0 52%,#0000 0;
-  background:
-    linear-gradient(-45deg,var(--c)),linear-gradient( 45deg,var(--c)),
-    repeating-conic-gradient(from 45deg,var(--primary) 0 25%,var(--primary) 0 50%);
+  --c: #0000 48%, var(--background) 0 52%, #0000 0;
+  background: linear-gradient(-45deg, var(--c)),
+    linear-gradient(45deg, var(--c)),
+    repeating-conic-gradient(
+      from 45deg,
+      var(--primary) 0 25%,
+      var(--primary) 0 50%
+    );
   background-size: var(--s) var(--s);
 }
 
-.blob-2 {
+.shape-4 {
   aspect-ratio: 1;
-  clip-path: shape(from 82.88% 33.45%,curve to 81.93% 65.36% with 89.36% 50.00%,curve to 58.49% 81.84% with 74.50% 80.72%,curve to 30.37% 74.12% with 42.48% 82.96%,curve to 17.61% 49.69% with 18.27% 65.28%,curve to 30.12% 27.31% with 16.96% 34.09%,curve to 59.83% 18.71% with 43.27% 20.52%,curve to 82.88% 33.45% with 76.39% 16.90%);
+  clip-path: shape(
+    from 82.88% 33.45%,
+    curve to 81.93% 65.36% with 89.36% 50%,
+    curve to 58.49% 81.84% with 74.5% 80.72%,
+    curve to 30.37% 74.12% with 42.48% 82.96%,
+    curve to 17.61% 49.69% with 18.27% 65.28%,
+    curve to 30.12% 27.31% with 16.96% 34.09%,
+    curve to 59.83% 18.71% with 43.27% 20.52%,
+    curve to 82.88% 33.45% with 76.39% 16.9%
+  );
 }
 
-.blob-6 {
-  --s: 80px;  
-  --_s: calc(2*var(--s)) calc(2*var(--s));
+.texture-1 {
+  --s: 80px;
+  --_s: calc(2 * var(--s)) calc(2 * var(--s));
   --_g: 35.36% 35.36% at;
-  --_c: #0000 66%,var(--background) 68% 70%,#0000 72%;
+  --_c: #0000 66%, var(--background) 68% 70%, #0000 72%;
 
-  background:
-    radial-gradient(var(--_g) 100% 25%,var(--_c)) var(--s) var(--s)/var(--_s),
-    radial-gradient(var(--_g) 0    75%,var(--_c)) var(--s) var(--s)/var(--_s),
-    radial-gradient(var(--_g) 100% 25%,var(--_c)) 0 0/var(--_s),
-    radial-gradient(var(--_g) 0    75%,var(--_c)) 0 0/var(--_s),
-    repeating-conic-gradient(var(--primary) 0 25%,#0000 0 50%) 0 0/var(--_s),
-    radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s)
-    var(--primary);
+  background: radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s) /
+      var(--_s),
+    radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s) / var(--_s),
+    radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0 / var(--_s),
+    radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0 / var(--_s),
+    repeating-conic-gradient(var(--primary) 0 25%, #0000 0 50%) 0 0 / var(--_s),
+    radial-gradient(var(--_c)) 0 calc(var(--s) / 2) / var(--s) var(--s)
+      var(--primary);
+}
+
+.shape-2 {
+  aspect-ratio: 1;
+  clip-path: shape(
+    from 86.03% 40.69%,
+    curve to 89.5% 61.32% with 89.79% 50%,
+    curve to 81.45% 81.85% with 89.2% 72.63%,
+    curve to 61.85% 88.56% with 73.71% 91.06%,
+    curve to 39.85% 85.62% with 50% 86.06%,
+    curve to 20.36% 78.84% with 29.69% 85.17%,
+    curve to 5.92% 61.25% with 11.03% 72.5%,
+    curve to 9.87% 41.03% with 0.81% 50%,
+    curve to 22.1% 19.61% with 18.94% 32.07%,
+    curve to 37.63% 7.12% with 25.26% 7.16%,
+    curve to 58.55% 13.74% with 50% 7.09%,
+    curve to 74.68% 25.88% with 67.1% 20.39%,
+    curve to 86.03% 40.69% with 82.26% 31.37%
+  );
+}
+
+.shape-1 {
+  aspect-ratio: 1;
+  clip-path: shape(
+    from 75.74% 24.19%,
+    curve to 83.65% 37.73% with 86.65% 26.74%,
+    curve to 83.16% 58.68% with 80.65% 48.72%,
+    curve to 81.17% 80.35% with 85.66% 68.64%,
+    curve to 63.94% 85.09% with 76.69% 92.06%,
+    curve to 42.54% 79.47% with 51.18% 78.13%,
+    curve to 22.57% 77.7% with 33.89% 80.81%,
+    curve to 10.21% 63.16% with 11.24% 74.6%,
+    curve to 8.06% 39.6% with 9.18% 51.71%,
+    curve to 20.48% 26.15% with 6.95% 27.49%,
+    curve to 41.42% 23.35% with 34.01% 24.81%,
+    curve to 56.82% 21.76% with 48.82% 21.88%,
+    curve to 75.74% 24.19% with 64.82% 21.65%
+  );
+}
+
+.shape-3 {
+  aspect-ratio: 1;
+  clip-path: shape(
+    from 92.64% 43.49%,
+    curve to 79.03% 52.51% with 90.95% 50%,
+    curve to 67.69% 58.38% with 67.11% 55.02%,
+    curve to 64.67% 62.25% with 68.27% 61.74%,
+    curve to 64.31% 75.61% with 61.06% 62.76%,
+    curve to 61.94% 91.22% with 67.56% 88.46%,
+    curve to 51.74% 81.86% with 56.32% 93.99%,
+    curve to 42.9% 72.3% with 47.16% 69.74%,
+    curve to 30.59% 78.27% with 38.65% 74.86%,
+    curve to 24.8% 73.22% with 22.54% 81.69%,
+    curve to 29.73% 59.95% with 27.07% 64.74%,
+    curve to 30.98% 52.58% with 32.4% 55.17%,
+    curve to 16.91% 43.29% with 29.55% 50%,
+    curve to 7.26% 30.52% with 4.26% 36.57%,
+    curve to 15.68% 20.55% with 10.26% 24.46%,
+    curve to 31.78% 25.08% with 21.09% 16.64%,
+    curve to 44.56% 30.12% with 42.47% 33.51%,
+    curve to 50.59% 22.64% with 46.65% 26.73%,
+    curve to 56.57% 24.83% with 54.52% 18.55%,
+    curve to 66.05% 27.01% with 58.62% 31.12%,
+    curve to 74.82% 28.05% with 73.48% 22.9%,
+    curve to 85.24% 35.09% with 76.16% 33.19%,
+    curve to 92.64% 43.49% with 94.33% 36.98%
+  );
 }
