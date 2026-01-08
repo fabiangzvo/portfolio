@@ -6,7 +6,7 @@ import { twMerge } from "tailwind-merge";
 type ContainerProps = {
   children: React.ReactNode;
   id: string;
-  label: string| ReactNode;
+  label: string | ReactNode;
   description?: undefined | TrustedHTML;
   rightTitle?: boolean;
   classes?: { container?: string; title?: string; containerTitle?: string };
@@ -43,7 +43,7 @@ function Container(props: ContainerProps) {
       >
         <h1
           className={cs({
-            "font-albertSans pointer-events-none font-extrabold fill-text-transparent bg-clip-text bg-gradient-to-r to-tertiary from-primary mb-[0.2em] pr-7 max-sm:w-full text-5xl max-md:text-3xl max-md:w-full":
+            "font-albertSans pointer-events-none font-extrabold fill-text-transparent bg-clip-text bg-gradient-to-r to-tertiary from-primary mb-[0.2em] pr-7 max-sm:w-full text-5xl max-md:text-3xl max-md:w-full max-md:pr-0":
               true,
             [title]: !!title,
           })}

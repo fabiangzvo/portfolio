@@ -10,9 +10,11 @@ function About() {
     <Container
       id="about"
       label={<span className="w-full text-center flex flex-col justify-center">
-        <span className=" h-[60vh] w-full flex justify-center items-center max-sm:scale-85 blob">
+        <span className="relative h-[60vh] w-full flex justify-center items-end max-sm:scale-85 blob">
           <span className="blob blob-6 bg-primary h-[60vh]" />
-          <Image src="/avatar.png" alt="programmer" width={250} height={250} className="[clip-path:circle(70%)] [filter:drop-shadow(0_1px_12px_var(--shadow))] absolute z-30 max-sm:bottom-24" />
+          <div className="w-full h-3/5 absolute bottom-32 max-md:bottom-20 max-sm:bottom-18 max-md:h-2/4">
+            <Image src="/avatar.png" alt="programmer" fill className="[clip-path:circle(70%)] [filter:drop-shadow(0_1px_12px_var(--shadow))] z-30 object-contain" />
+          </div>
         </span>
         {translations("label")}
       </span>}
