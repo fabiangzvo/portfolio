@@ -3,6 +3,7 @@ import "@theme-toggles/react/css/Classic.css"
 import { Albert_Sans } from "next/font/google";
 import { GetStaticPropsContext } from "next";
 import { AnimatePresence } from "framer-motion";
+import { twMerge } from "tailwind-merge";
 
 import Education from "@components/education";
 import Experience from "@components/experience";
@@ -20,7 +21,10 @@ const AlbertSans = Albert_Sans({
 export default function Home() {
   return (
     <main
-      className={`w-full min-h-screen flex flex-col items-center justify-around lg:w-[90vw] max-lg:px-5 ${AlbertSans.variable}`}
+      className={twMerge(
+        'w-full min-h-screen flex flex-col items-center justify-around lg:w-[90vw] max-lg:px-5',
+        AlbertSans.variable
+      )}
     >
       <Head />
       <AnimatePresence mode="wait">
