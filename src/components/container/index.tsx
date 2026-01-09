@@ -9,7 +9,7 @@ type ContainerProps = {
   label: string | ReactNode;
   description?: undefined | TrustedHTML;
   rightTitle?: boolean;
-  classes?: { container?: string; title?: string; containerTitle?: string };
+  classes?: { container?: string; title?: string; containerTitle?: string, content?: string };
 };
 
 const transition: SpringOptions = {
@@ -30,7 +30,7 @@ const contentVariants: Variants = {
 
 function Container(props: ContainerProps) {
   const { children, id, label, rightTitle, description, classes = {} } = props;
-  const { container = "", title = "", containerTitle = "" } = classes;
+  const { container = "", title = "", containerTitle = "", content: contentClass = "" } = classes;
 
   const { leftContent, rightContent } = useMemo(() => {
     const titleComponent = (
@@ -51,7 +51,7 @@ function Container(props: ContainerProps) {
           {label}
         </h1>
         <span
-          className="w-full text-base text-paragraph pointer-events-none"
+          className="w-full text-base text-paragraph pointer-events-none text-wrap"
           dangerouslySetInnerHTML={{ __html: description || "" }}
         />
       </div>
@@ -61,6 +61,7 @@ function Container(props: ContainerProps) {
         className={cs({
           "w-full max-2xl:order-last mb-10": true,
           "mr-10": rightTitle,
+          [contentClass]: !!contentClass,
         })}
       >
         {children}
@@ -71,7 +72,7 @@ function Container(props: ContainerProps) {
       leftContent: rightTitle ? content : titleComponent,
       rightContent: rightTitle ? titleComponent : content,
     };
-  }, [containerTitle, title, label, description, children, rightTitle]);
+  }, [containerTitle, title, label, description, children, rightTitle, contentClass]);
 
   return (
     <motion.div

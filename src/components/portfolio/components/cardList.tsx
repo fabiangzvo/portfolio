@@ -12,7 +12,7 @@ function CardList(props: CardListProps) {
   );
 
   return (
-    <div className="w-full h-full grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] justify-items-center grid-wrap gap-8">
+    <div className="w-full h-full grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] justify-items-center grid-wrap gap-8 max-md:grid-cols-1">
       {cardItems}
     </div>
   );

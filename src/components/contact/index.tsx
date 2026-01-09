@@ -79,7 +79,7 @@ function Contact() {
       classes={{
         container: "max-xl:flex-column",
         containerTitle:
-          "max-2xl:w-full max-xl:flex-column max-xl:items-center max-xl:justify-center xl:mr-10 mb-10",
+          "max-2xl:w-full max-xl:flex-column max-xl:items-center max-xl:justify-center xl:mr-10 mb-10 mr-0",
       }}
       rightTitle
     >
