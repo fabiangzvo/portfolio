@@ -1,4 +1,4 @@
-import "@theme-toggles/react/css/Classic.css"
+import "@theme-toggles/react/css/Classic.css";
 
 import { Albert_Sans } from "next/font/google";
 import { GetStaticPropsContext } from "next";
@@ -22,10 +22,9 @@ export default function Home() {
   return (
     <main
       className={twMerge(
-        'w-full min-h-screen flex flex-col items-center justify-around lg:w-[90vw] max-lg:px-5',
-        AlbertSans.variable
-      )}
-    >
+        "w-full min-h-screen flex flex-col items-center justify-around lg:w-[90vw] max-lg:px-5 max-sm:px-0",
+        AlbertSans.variable,
+      )}>
       <Head />
       <AnimatePresence mode="wait">
         <Greeting />
