@@ -60,10 +60,12 @@
     "swatitDate": "10 meses, 2019 - 2020",
     "swatitPosition": "Swat-it - Desarrollador web junior.",
     "swatitDescription": "Desarrollo web utilizando tecnologías como PHP, Angular, Wordpress, Jquery, TypeRocket. Me enfoqué en crear nuevas funcionalidades tales como la creación y correcciones de UI, creación de endpoints y recuperación de proyectos casi perdidos.",
-    "redCapDate": "Agosto - 2025",
+    "redCapDate": "6 meses, 2025",
     "redCapPosition": "RedCap - Desarrollador Ssr full stack",
-    "redCapDescription": "Desarrollo de software a la medida con tecnologías como React, Nextjs, NestJs y TypeScript. Integración de servicios externos para creación de bonos de casino."
-    
+    "redCapDescription": "Desarrollo de software a la medida con tecnologías como React, Nextjs, NestJs y TypeScript. Integración de servicios externos para creación de bonos de casino.",
+    "lapzoDate": "10 meses, 2026",
+    "lapzoPosition": "Lapzo - Ssr Full Stack Developer",
+    "lapzoDescription": "Custom software development using technologies such as React, Next.js, NestJS, and TypeScript. Integration of external services for casino bonus creation."
   },
   "portfolio": {
     "label": "Portafolio",
