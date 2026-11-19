@@ -6,8 +6,8 @@ import {
   NavbarContent,
   NavbarItem,
   NavbarMenuToggle,
-  Link,
-} from "@heroui/react";
+} from "@heroui/navbar";
+import { Link } from "@heroui/react";
 
 import LanguageDropdown from "@components/languageDropdown";
 import ThemeSwitch from "@components/themeSwitch";
@@ -58,7 +58,7 @@ function NavbarComponent() {
       </NavbarContent>
       <NavbarMenuToggle
         aria-label={showMenu ? "Close menu" : "Open menu"}
-        className="lg:hidden"
+        className="lg:hidden text-text"
       />
     </Navbar>);
 }

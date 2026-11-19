@@ -50,7 +50,7 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [router.locale, setProviders, pageProps.messages]);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-full min-w-0 overflow-x-clip">
       <Providers>
         <Navbar />
         <div className="container">

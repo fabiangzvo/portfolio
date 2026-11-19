@@ -74,7 +74,7 @@ function Experience() {
       label={
         <span className="w-full flex flex-col items-center">
           <span className="relative h-[60vh] w-full flex justify-center items-end max-sm:scale-85 mb-10">
-            <span className="shape-1 box-texture bg-primary h-[50vh]" />
+            <span className="shape-1 box-texture bg-primary h-[50vh] max-h-[90vw]" />
             <div className="w-full h-3/5 absolute bottom-0 max-md:h-2/4 max-md:bottom-6">
               <Image
                 src="/user-programming.png"

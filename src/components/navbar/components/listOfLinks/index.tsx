@@ -4,8 +4,8 @@ import {
   NavbarItem,
   NavbarMenu,
   NavbarMenuItem,
-  Link
-} from "@heroui/react";
+} from "@heroui/navbar";
+import { Link } from "@heroui/react";
 
 import { MenuItemProps } from "../../types";
 import LanguageDropdown from "@components/languageDropdown";

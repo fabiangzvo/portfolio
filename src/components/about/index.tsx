@@ -11,7 +11,7 @@ function About() {
       id="about"
       label={<span className="w-full text-center flex flex-col justify-center">
         <span className="relative h-[60vh] w-full flex justify-center items-end max-sm:scale-85 shape-5">
-          <span className="shape-5 texture-2 bg-primary h-[60vh]" />
+          <span className="shape-5 texture-2 bg-primary h-[60vh] max-h-[90vw]" />
           <div className="w-full h-3/5 absolute bottom-32 max-md:bottom-20 max-sm:bottom-18 max-md:h-2/4">
             <Image src="/avatar.png" alt="programmer" fill className="[clip-path:circle(70%)] [filter:drop-shadow(0_1px_12px_var(--shadow))] z-30 object-contain" />
           </div>

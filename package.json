@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroui/navbar": "2.2.27",
     "@heroui/react": "^2.8.3",
     "@theme-toggles/react": "^4.1.0",
     "@vercel/analytics": "^1.2.2",
