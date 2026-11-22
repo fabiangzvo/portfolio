@@ -45,7 +45,7 @@ function Portfolio() {
         stackList: ["react", "next", "typescript", "tailwind"],
       },
     ],
-    [translations]
+    [translations],
   );
 
   return (
@@ -56,9 +56,8 @@ function Portfolio() {
       classes={{
         container: "flex-col h-full 2xl:items-start",
         containerTitle:
-          "max-2xl:w-full max-xl:flex-column max-xl:items-center max-xl:justify-center xl:mr-10 mb-10",
-      }}
-    >
+          "max-2xl:w-full max-xl:flex-column max-xl:items-center max-xl:justify-center xl:mr-10 mb-10 max-md:px-6",
+      }}>
       <CardList items={items} />
     </Container>
   );

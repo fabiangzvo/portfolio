@@ -19,20 +19,30 @@ function Greeting() {
           <div className="pointer-events-none text-paragraph text-2xl w-full max-lg:text-center">
             <section className="flex flex-wrap justify-start max-lg:justify-center">
               {translation("iam")}&nbsp;
-              <WordTyping wordList={[translation("developer.0"), translation("developer.1"), translation("developer.2")]} />
+              <WordTyping
+                wordList={[
+                  translation("developer.0"),
+                  translation("developer.1"),
+                  translation("developer.2"),
+                ]}
+              />
             </section>
             {translation("description")}
           </div>
         </div>
         <div className="relative flex items-center justify-center max-lg:order-first max-md:py-10 max-sm:mt-4 max-lg:mt-4 mt-8 h-[65vh] max-md:h-[50vh]">
           <div className="w-[50vw] h-[50vh] bg-cover bg-center bg-primary rounded-3xl max-md:w-[90vw] max-md:h-[40vh] box-texture" />
-          <Image src="/avatar-greeting.png" alt="Dev" fill className="absolute z-20 object-contain [clip-path:circle(60%)] [filter:drop-shadow(0_6px_12px_var(--shadow))]" />
-        </div >
-      </div >
-      <SocialNetwork />
-    </section >
+          <Image
+            src="/avatar-greeting.png"
+            alt="Dev"
+            fill
+            className="absolute z-20 object-contain [clip-path:circle(60%)] [filter:drop-shadow(0_6px_12px_var(--shadow))]"
+          />
+        </div>
+      </div>
+      <SocialNetwork containerClass="max-md:ml-6" />
+    </section>
   );
 }
-
 
 export default Greeting;

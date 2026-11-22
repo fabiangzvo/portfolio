@@ -9,7 +9,12 @@ type ContainerProps = {
   label: string | ReactNode;
   description?: undefined | TrustedHTML;
   rightTitle?: boolean;
-  classes?: { container?: string; title?: string; containerTitle?: string, content?: string };
+  classes?: {
+    container?: string;
+    title?: string;
+    containerTitle?: string;
+    content?: string;
+  };
 };
 
 const transition: SpringOptions = {
@@ -30,24 +35,25 @@ const contentVariants: Variants = {
 
 function Container(props: ContainerProps) {
   const { children, id, label, rightTitle, description, classes = {} } = props;
-  const { container = "", title = "", containerTitle = "", content: contentClass = "" } = classes;
+  const {
+    container = "",
+    title = "",
+    containerTitle = "",
+    content: contentClass = "",
+  } = classes;
 
   const { leftContent, rightContent } = useMemo(() => {
     const titleComponent = (
       <div
         className={cs({
-          "w-[60vw] mb-10 max-lg:w-full max-2xl:order-first max-md:w-full":
-            true,
+          "w-[60vw] mb-10 max-lg:w-full max-2xl:order-first max-md:w-full": true,
           [containerTitle]: !!containerTitle,
-        })}
-      >
+        })}>
         <h1
           className={cs({
-            "font-albertSans pointer-events-none font-extrabold fill-text-transparent bg-clip-text bg-gradient-to-r to-tertiary from-primary mb-[0.2em] pr-7 max-sm:w-full text-5xl max-md:text-3xl max-md:w-full max-md:pr-0":
-              true,
+            "font-albertSans pointer-events-none font-extrabold fill-text-transparent bg-clip-text bg-gradient-to-r to-tertiary from-primary mb-[0.2em] pr-7 max-sm:w-full text-5xl max-md:text-3xl max-md:w-full max-md:pr-0": true,
             [title]: !!title,
-          })}
-        >
+          })}>
           {label}
         </h1>
         <span
@@ -59,11 +65,10 @@ function Container(props: ContainerProps) {
     const content = (
       <div
         className={cs({
-          "w-full max-2xl:order-last mb-10": true,
+          "w-full max-2xl:order-last mb-10 max-md:px-6": true,
           "mr-10": rightTitle,
           [contentClass]: !!contentClass,
-        })}
-      >
+        })}>
         {children}
       </div>
     );
@@ -72,7 +77,15 @@ function Container(props: ContainerProps) {
       leftContent: rightTitle ? content : titleComponent,
       rightContent: rightTitle ? titleComponent : content,
     };
-  }, [containerTitle, title, label, description, children, rightTitle, contentClass]);
+  }, [
+    containerTitle,
+    title,
+    label,
+    description,
+    children,
+    rightTitle,
+    contentClass,
+  ]);
 
   return (
     <motion.div
@@ -85,8 +98,7 @@ function Container(props: ContainerProps) {
       className={twMerge(
         "w-full min-h-[100vh] h-full flex justify-center font-albertSans text-xl 2xl:items-center max-2xl:flex-col",
         container,
-      )}
-    >
+      )}>
       {leftContent}
       {rightContent}
     </motion.div>
