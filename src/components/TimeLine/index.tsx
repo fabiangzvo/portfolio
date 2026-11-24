@@ -12,9 +12,12 @@ import type { HorizontalTimelineProps } from "./types";
 const PINNED_MODES =
   "group-data-[mode=pinned]/hx:snap-none group-data-[mode=pinned]/hx:flex group-data-[mode=pinned]/hx:h-[calc(100dvh-var(--hx-offset))] group-data-[mode=pinned]/hx:items-center group-data-[mode=pinned]/hx:overflow-hidden group-data-[mode=pinned]/hx:py-0 group-data-[mode=embedded]/hx:snap-none group-data-[mode=embedded]/hx:overflow-hidden group-data-[mode=embedded]/hx:py-4";
 
-function HorizontalTimeline(props: HorizontalTimelineProps) {
+function HorizontalTimeline<T = unknown>(props: HorizontalTimelineProps<T>) {
   const {
     list = [],
+    items,
+    renderItem,
+    hideProgressLine = false,
     intro,
     id,
     stickyOffset = 64,
@@ -28,7 +31,7 @@ function HorizontalTimeline(props: HorizontalTimelineProps) {
   const { pinRef, stickyRef, trackRef, listRef } = useHorizontalViewTimeline({
     stickyOffset,
     minPinnedHeight,
-    itemsKey: list,
+    itemsKey: items ?? list,
   });
 
   return (
@@ -71,27 +74,34 @@ function HorizontalTimeline(props: HorizontalTimelineProps) {
             <div
               ref={listRef}
               data-hx-list
-              className="relative pt-[88px] max-md:pt-[72px] shrink-0">
+              className={twMerge(
+                "relative shrink-0",
+                !hideProgressLine && "pt-[88px] max-md:pt-[72px]",
+              )}>
               {/* Base line + progress fill (the fill is animated by the hook) */}
-              <div
-                aria-hidden="true"
-                className="absolute left-0 right-0 top-[30px] max-md:top-[24px] h-1 overflow-hidden rounded-full bg-stroke">
-                <span
-                  data-hx-fill
-                  className="absolute inset-0 origin-left bg-gradient-to-r from-primary to-highlight"
-                />
-              </div>
+              {!hideProgressLine && (
+                <div
+                  aria-hidden="true"
+                  className="absolute left-0 right-0 top-[30px] max-md:top-[24px] h-1 overflow-hidden rounded-full bg-stroke">
+                  <span
+                    data-hx-fill
+                    className="absolute inset-0 origin-left bg-gradient-to-r from-primary to-highlight"
+                  />
+                </div>
+              )}
 
               <ol className="flex list-none items-start gap-8 md:gap-10">
-                {list.map((item, index) => (
-                  <TimelineItem
-                    key={index}
-                    {...item}
-                    index={index}
-                    labels={labels}
-                    className={classes.card}
-                  />
-                ))}
+                {items && renderItem
+                  ? items.map((item, index) => renderItem(item, index))
+                  : list.map((item, index) => (
+                      <TimelineItem
+                        key={index}
+                        {...item}
+                        index={index}
+                        labels={labels}
+                        className={classes.card}
+                      />
+                    ))}
               </ol>
             </div>
           </div>

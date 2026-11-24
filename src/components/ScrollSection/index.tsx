@@ -28,8 +28,7 @@ export function ScrollSection({
       data-bgcolor={bgColor}
       data-textcolor={textColor}
       className={className}
-      {...rest}
-    >
+      {...rest}>
       {children}
     </section>
   );
@@ -64,8 +63,7 @@ export function ParallaxElement({
       data-scroll-speed={speed !== undefined ? String(speed) : undefined}
       data-scroll-delay={delay !== undefined ? String(delay) : undefined}
       data-scroll-direction={direction}
-      {...rest}
-    >
+      {...rest}>
       {children}
     </Tag>
   );

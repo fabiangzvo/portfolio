@@ -11,7 +11,7 @@ function About() {
       id="about"
       label={
         <span className="w-full text-center flex flex-col justify-center">
-          <span className="relative h-[60vh] w-full flex justify-center items-end max-sm:scale-85 shape-5">
+          <span className="relative h-[60vh] w-full flex justify-center items-end max-sm:scale-85 shape-5 max-md:h-[50vh]">
             <span className="shape-5 texture-2 bg-primary h-[60vh] max-h-[90vw]" />
             <div className="w-full h-3/5 absolute bottom-32 max-md:bottom-20 max-sm:bottom-18 max-md:h-2/4">
               <Image
@@ -25,9 +25,9 @@ function About() {
         </span>
       }
       classes={{
-        container: "max-xl:flex-column",
+        container: "max-xl:flex-column min-h-fit",
         containerTitle:
-          "max-2xl:w-full max-xl:flex-column max-xl:items-center max-xl:justify-center xl:mr-10 mb-0",
+          "max-2xl:w-full max-xl:flex-column max-xl:items-center max-xl:justify-center xl:mr-10 !mb-0 min-h-fit",
       }}
       rightTitle>
       <div className="relative flex flex-col">

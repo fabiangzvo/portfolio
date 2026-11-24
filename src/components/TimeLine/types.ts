@@ -14,9 +14,15 @@ export type HorizontalTimelineClasses = {
   card?: string;
 };
 
-export type HorizontalTimelineProps = {
-  /** Items to render, same shape used by MilestonesList */
-  list: MilestoneList;
+export type HorizontalTimelineProps<T = MilestoneItemProps> = {
+  /** Items to render with the default Milestone card, same shape used by MilestonesList */
+  list?: MilestoneList;
+  /** Custom items array when using a custom `renderItem` renderer (e.g. Portfolio cards) */
+  items?: readonly T[];
+  /** Custom item renderer; should return an `<li data-hx-card>` element */
+  renderItem?: (item: T, index: number) => ReactNode;
+  /** Hides the top progress line so only the horizontal cards are shown */
+  hideProgressLine?: boolean;
   /** Optional first panel (image, title, description…) that scrolls with the cards */
   intro?: ReactNode;
   id?: string;

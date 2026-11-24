@@ -32,12 +32,12 @@ export default function Home() {
       <AnimatePresence mode="wait">
         <ScrollSection
           key="greeting"
-          className="w-full min-h-screen flex items-center justify-center">
+          className="w-full min-h-screen flex items-center justify-center ">
           <Greeting />
         </ScrollSection>
         <ScrollSection
           key="about"
-          className="w-full min-h-screen flex items-center justify-center">
+          className="w-full min-h-auto flex items-center justify-center">
           <About />
         </ScrollSection>
         <HorizontalScrollSection
@@ -50,7 +50,7 @@ export default function Home() {
         </HorizontalScrollSection>
         <ScrollSection
           key="education"
-          className="w-full min-h-screen flex items-center justify-center">
+          className="w-full min-h-auto flex items-center justify-center">
           <Education />
         </ScrollSection>
         <HorizontalScrollSection
@@ -58,12 +58,12 @@ export default function Home() {
           className="w-screen h-screen overflow-hidden bg-background"
           trackClassName="flex h-screen items-stretch"
           itemClassName="w-screen h-screen flex-shrink-0 overflow-hidden"
-          slideInnerClassName="lg:px-[5vw] max-lg:px-5 pt-20 pb-10">
+          slideInnerClassName="pt-16 pb-6">
           <Portfolio />
         </HorizontalScrollSection>
         <ScrollSection
           key="contact"
-          className="w-full min-h-screen flex items-center justify-center">
+          className="w-full min-h-auto flex items-center justify-center">
           <Contact />
         </ScrollSection>
       </AnimatePresence>

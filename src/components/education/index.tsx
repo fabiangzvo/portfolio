@@ -62,9 +62,9 @@ function Education() {
       }
       description={translations("description")}
       classes={{
-        container: "max-xl:flex-column",
+        container: "max-xl:flex-column min-h-fit",
         containerTitle:
-          "max-2xl:w-full max-xl:flex-column max-xl:items-center max-xl:justify-center xl:mr-10 mb-10 max-md:px-6",
+          "max-2xl:w-full max-xl:flex-column max-xl:items-center max-xl:justify-center xl:mr-10 mb-10 max-md:px-6 min-h-fit",
       }}>
       <MilestonesList list={items} disableViewMore />
     </Container>

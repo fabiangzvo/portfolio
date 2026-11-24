@@ -11,13 +11,9 @@ function Greeting() {
     <section className="w-full min-h-screen flex flex-col text-sm lg:flex relative justify-center">
       <div className="w-full h-full items-center justify-center text-sm flex font-albertSans max-lg:flex-col max-lg:mb-[9em] max-sm:mb-[11em]">
         <div className="flex flex-col w-full items-start justify-center max-lg:order-last">
-          <ParallaxElement
-            as="h2"
-            speed={0.2}
-            delay={2}
-            className="pointer-events-none text-paragraph text-2xl w-full max-lg:text-center">
+          <h2 className="pointer-events-none text-paragraph text-2xl w-full max-lg:text-center">
             {translation("greeting")}
-          </ParallaxElement>
+          </h2>
           <h1 className="pointer-events-none text-text w-full text-6xl font-extrabold max-lg:text-center max-md:text-7xl">
             Fabián Guzmán Otavo,
           </h1>
@@ -49,5 +45,15 @@ function Greeting() {
     </section>
   );
 }
+
+/**
+ * <ParallaxElement
+            as="h2"
+            speed={0.2}
+            delay={2}
+            className="pointer-events-none text-paragraph text-2xl w-full max-lg:text-center">
+            {translation("greeting")}
+          </ParallaxElement>
+*/
 
 export default Greeting;

@@ -1,13 +1,17 @@
 import { useMemo } from "react";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
-import Container from "../container";
-import CardList from "./components/cardList";
+import TimeLine from "@components/TimeLine";
+
+import Card from "./components/card";
+import { CardProps } from "./types";
 
 function Portfolio() {
   const translations = useTranslations("portfolio");
 
-  const items = useMemo(
+  const items = useMemo<CardProps[]>(
     () => [
       {
         description: translations("wordSearchDescription"),
@@ -48,18 +52,53 @@ function Portfolio() {
     [translations],
   );
 
+  const intro = (
+    <div className="flex flex-row max-md:flex-col items-center justify-center gap-10 max-md:gap-5 font-albertSans pr-4 max-md:pr-0">
+      <div className="w-[min(440px,84vw)] max-md:w-full max-md:order-last flex-shrink-0 flex flex-col justify-center max-md:items-center max-md:text-center">
+        <h1 className="font-albertSans pointer-events-none font-extrabold fill-text-transparent bg-clip-text bg-gradient-to-r to-tertiary from-primary mb-4 text-5xl md:text-6xl max-md:text-4xl">
+          {translations("label")}
+        </h1>
+        <span
+          className="text-lg md:text-xl max-md:text-base text-paragraph pointer-events-none leading-relaxed"
+          dangerouslySetInnerHTML={{
+            __html: translations("description") || "",
+          }}
+        />
+      </div>
+      <div className="relative h-[50vh] w-[44vh] max-w-[75vw] max-md:h-[30vh] max-md:w-[30vh] flex-shrink-0 flex justify-center items-end">
+        <span className="shape-2 texture-3 bg-primary h-[44vh] max-md:h-[26vh] max-h-[75vw]" />
+        <div className="w-full h-4/5 absolute bottom-0">
+          <Image
+            src="/user-pc.png"
+            alt="portfolio"
+            fill
+            className="[clip-path:circle(70%)] [filter:drop-shadow(0_6px_12px_var(--shadow))] z-30 object-contain"
+          />
+        </div>
+      </div>
+    </div>
+  );
+
   return (
-    <Container
-      id="portfolio"
-      label={translations("label")}
-      description={translations("description")}
-      classes={{
-        container: "flex-col h-full 2xl:items-start",
-        containerTitle:
-          "max-2xl:w-full max-xl:flex-column max-xl:items-center max-xl:justify-center xl:mr-10 mb-10 max-md:px-6",
-      }}>
-      <CardList items={items} />
-    </Container>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ amount: 0.1 }}
+      transition={{ bounce: 0.4, duration: 1 }}
+      className="w-full flex items-center">
+      <TimeLine
+        id="portfolio"
+        hideProgressLine
+        intro={intro}
+        items={items}
+        renderItem={(item, index) => (
+          <Card key={item.title} index={index} {...item} />
+        )}
+        classes={{
+          intro: "w-auto max-md:w-[calc(100vw-3rem)]",
+        }}
+      />
+    </motion.div>
   );
 }
 

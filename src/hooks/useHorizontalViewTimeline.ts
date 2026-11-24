@@ -120,7 +120,9 @@ export function buildGsapHorizontalTimeline({
 
   const dotX = (card: HTMLElement) => {
     const dot = card.querySelector<HTMLElement>("[data-hx-dot]");
-    const dotCenter = dot ? dot.offsetLeft + dot.offsetWidth / 2 : 0;
+    const dotCenter = dot
+      ? dot.offsetLeft + dot.offsetWidth / 2
+      : card.offsetWidth / 2;
     return list.offsetLeft + card.offsetLeft + dotCenter;
   };
 
