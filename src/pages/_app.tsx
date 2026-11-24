@@ -8,6 +8,7 @@ import Navbar from "@components/navbar";
 import { useProviders } from "@hooks/useProviders";
 import Footer from "@components/footer";
 
+import "locomotive-scroll/locomotive-scroll.css";
 import "../styles/globals.css";
 import "../styles/keyframes.css";
 

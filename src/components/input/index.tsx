@@ -6,15 +6,12 @@ function Input(props: InputProps) {
 
   return (
     <div className="mb-5">
-      <label
-        htmlFor={name}
-        className="block mb-2 text-base text-text"
-      >
+      <label htmlFor={name} className="block mb-2 text-lg text-text">
         {label}
       </label>
       <input
         id={name}
-        className="bg-stroke text-base rounded-lg block w-full p-2.5"
+        className="bg-stroke text-lg rounded-lg block w-full p-2.5"
         {...rest}
       />
     </div>

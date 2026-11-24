@@ -3,16 +3,21 @@ import Image from "next/image";
 
 import SocialNetwork from "@components/socialNetwork";
 import WordTyping from "@components/wordWriter";
+import { ParallaxElement } from "@components/ScrollSection";
 
 function Greeting() {
   const translation = useTranslations("main");
   return (
-    <section className="w-full min-h-screen flex flex-col text-sm lg:flex relative">
+    <section className="w-full min-h-screen flex flex-col text-sm lg:flex relative justify-center">
       <div className="w-full h-full items-center justify-center text-sm flex font-albertSans max-lg:flex-col max-lg:mb-[9em] max-sm:mb-[11em]">
         <div className="flex flex-col w-full items-start justify-center max-lg:order-last">
-          <h2 className="pointer-events-none text-paragraph text-2xl w-full max-lg:text-center">
+          <ParallaxElement
+            as="h2"
+            speed={0.2}
+            delay={2}
+            className="pointer-events-none text-paragraph text-2xl w-full max-lg:text-center">
             {translation("greeting")}
-          </h2>
+          </ParallaxElement>
           <h1 className="pointer-events-none text-text w-full text-6xl font-extrabold max-lg:text-center max-md:text-7xl">
             Fabián Guzmán Otavo,
           </h1>

@@ -15,9 +15,8 @@ function Form(props: FormProps) {
   return (
     <Card>
       <form
-        className="flex flex-col w-full bg-background rounded-xl px-24 pt-12 pb-16 max-md:px-[3em] text-base bg-background/20"
-        onSubmit={handleClick}
-      >
+        className="flex flex-col w-full bg-background rounded-xl px-24 pt-12 pb-16 max-md:px-[3em] text-lg bg-background/20"
+        onSubmit={handleClick}>
         <h1 className="pointer-events-none text-paragraph w-full text-center text-xl font-extrabold mb-10">
           {translations("label")}
         </h1>
@@ -36,15 +35,12 @@ function Form(props: FormProps) {
           required
         />
         <div className="mb-10">
-          <label
-            htmlFor="message"
-            className="block mb-2 text-base text-text"
-          >
+          <label htmlFor="message" className="block mb-2 text-lg text-text">
             {translations("message")}
           </label>
           <textarea
             id="message"
-            className="bg-stroke text-base rounded-lg block w-full p-2.5"
+            className="bg-stroke text-lg rounded-lg block w-full p-2.5"
             placeholder={translations("messagePlaceholder")}
             required
           />

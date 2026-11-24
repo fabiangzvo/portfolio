@@ -8,18 +8,23 @@ function MilestonesList(props: MilestoneProps) {
 
   const items = useMemo(
     () =>
-      list.map(({ icon, description, primaryText, secondaryText, iconClass }, index) => (
-        <MilestoneItem
-          key={index}
-          icon={icon}
-          description={description}
-          primaryText={primaryText}
-          secondaryText={secondaryText}
-          disableViewMore={disableViewMore}
-          iconClass={iconClass}
-        />
-      )),
-    [list, disableViewMore]
+      list.map(
+        (
+          { icon, description, primaryText, secondaryText, iconClass },
+          index,
+        ) => (
+          <MilestoneItem
+            key={index}
+            icon={icon}
+            description={description}
+            primaryText={primaryText}
+            secondaryText={secondaryText}
+            disableViewMore={disableViewMore}
+            iconClass={iconClass}
+          />
+        ),
+      ),
+    [list, disableViewMore],
   );
 
   return <ol className="relative ml-10">{items}</ol>;

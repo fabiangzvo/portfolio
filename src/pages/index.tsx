@@ -12,6 +12,9 @@ import Contact from "@components/contact";
 import About from "@components/about";
 import Greeting from "@components/greeting";
 import Head from "@components/head";
+import { SmoothScrollContainer } from "@hooks/useHorizontalScroll";
+import { ScrollSection } from "@components/ScrollSection";
+import { HorizontalScrollSection } from "@components/ScrollSection/HorizontalScrollSection";
 
 const AlbertSans = Albert_Sans({
   subsets: ["latin"],
@@ -20,21 +23,51 @@ const AlbertSans = Albert_Sans({
 
 export default function Home() {
   return (
-    <main
+    <SmoothScrollContainer
       className={twMerge(
         "w-full min-h-screen flex flex-col items-center justify-around lg:w-[90vw] max-lg:px-5 max-sm:px-0",
         AlbertSans.variable,
       )}>
       <Head />
       <AnimatePresence mode="wait">
-        <Greeting />
-        <About />
-        <Experience />
-        <Education />
-        <Portfolio />
-        <Contact />
+        <ScrollSection
+          key="greeting"
+          className="w-full min-h-screen flex items-center justify-center">
+          <Greeting />
+        </ScrollSection>
+        <ScrollSection
+          key="about"
+          className="w-full min-h-screen flex items-center justify-center">
+          <About />
+        </ScrollSection>
+        <HorizontalScrollSection
+          key="experience"
+          className="w-screen h-screen overflow-hidden bg-background"
+          trackClassName="flex h-screen items-stretch"
+          itemClassName="w-screen h-screen flex-shrink-0 overflow-hidden"
+          slideInnerClassName="pt-16 pb-6">
+          <Experience />
+        </HorizontalScrollSection>
+        <ScrollSection
+          key="education"
+          className="w-full min-h-screen flex items-center justify-center">
+          <Education />
+        </ScrollSection>
+        <HorizontalScrollSection
+          key="portfolio"
+          className="w-screen h-screen overflow-hidden bg-background"
+          trackClassName="flex h-screen items-stretch"
+          itemClassName="w-screen h-screen flex-shrink-0 overflow-hidden"
+          slideInnerClassName="lg:px-[5vw] max-lg:px-5 pt-20 pb-10">
+          <Portfolio />
+        </HorizontalScrollSection>
+        <ScrollSection
+          key="contact"
+          className="w-full min-h-screen flex items-center justify-center">
+          <Contact />
+        </ScrollSection>
       </AnimatePresence>
-    </main>
+    </SmoothScrollContainer>
   );
 }
 

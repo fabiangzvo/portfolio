@@ -57,7 +57,7 @@ function Container(props: ContainerProps) {
           {label}
         </h1>
         <span
-          className="w-full text-base text-paragraph pointer-events-none text-wrap"
+          className="w-full text-lg text-paragraph pointer-events-none text-wrap"
           dangerouslySetInnerHTML={{ __html: description || "" }}
         />
       </div>
@@ -96,7 +96,7 @@ function Container(props: ContainerProps) {
       key={id}
       id={id}
       className={twMerge(
-        "w-full min-h-[100vh] h-full flex justify-center font-albertSans text-xl 2xl:items-center max-2xl:flex-col",
+        "w-full min-h-[80vh] h-full flex justify-center font-albertSans text-xl 2xl:items-center max-2xl:flex-col",
         container,
       )}>
       {leftContent}
